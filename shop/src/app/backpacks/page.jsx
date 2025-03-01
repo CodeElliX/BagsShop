@@ -25,7 +25,6 @@ const Backpacks = () => {
         dispatch(resetFilters());
     }, [dispatch])
 
-    
     return (
         <>
             <div className={styles.backpacks_wrap}>

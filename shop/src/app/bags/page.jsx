@@ -26,6 +26,7 @@ const Bags = () => {
     }, [dispatch])
 
 
+
     return (
         <>
             <div className={styles.bags__wrap}>

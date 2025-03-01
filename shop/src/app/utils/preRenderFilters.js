@@ -9,9 +9,10 @@ export const preRenderFilters = (searchValue, items, activeFilters) => {
         const searchMatch = obj.name.toLowerCase().includes(searchValue.toLowerCase());
         const colorMatch = activeFilters.colours.length === 0 || activeFilters.colours.includes(obj.color);
         const genderMatch = activeFilters.gender.length === 0 || activeFilters.gender.includes(obj.gender);
-        return categoryMatch && seriesMatch && compartmentsMatch && searchMatch && colorMatch && genderMatch;
+        const matchesStructure = activeFilters.structures.length === 0 || activeFilters.structures.includes(obj.structures);
+        return categoryMatch && seriesMatch && compartmentsMatch && searchMatch && colorMatch && genderMatch && matchesStructure;
     });
-   return filtered;
+    return filtered;
 }
 
 export const preRenderFiltersHomePage = (searchValue, items, activeFilters) => {
@@ -21,9 +22,9 @@ export const preRenderFiltersHomePage = (searchValue, items, activeFilters) => {
         const genderMatch = activeFilters.gender.length === 0 || activeFilters.gender.includes(obj.gender);
         const searchMatch = obj.name.toLowerCase().includes(searchValue.toLowerCase());
         const categoryMatch = activeFilters.category.length === 0 || activeFilters.category.includes(obj.chapter);
-        return  colorMatch && genderMatch && searchMatch && categoryMatch;
+        return colorMatch && genderMatch && searchMatch && categoryMatch;
     });
-   return filtered;
+    return filtered;
 }
 
 

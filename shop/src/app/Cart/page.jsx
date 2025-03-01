@@ -1,11 +1,11 @@
 "use client"
 import styles from "./cart.module.css"
-import Link from "next/link";
 import CartItem from '../cartItem/page'
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useRef } from "react";
 import { removeAllItems } from '../redux/cartSlice'
 import CartEmpty from '../cartEmpty/page'
+import { useRouter } from "next/navigation";
 
 const Cart = () => {
   const totalPrice = useSelector(state => state.cart.totalPrice);
@@ -13,6 +13,11 @@ const Cart = () => {
   const totalCount = useSelector(state => state.cart.totalCount);
   const isMounted = useRef(false);
   const dispatch = useDispatch();
+  const router = useRouter();
+
+  const onClickBack = () => {
+    router.back();
+  };
 
   const removeCart = () => {
     dispatch(removeAllItems());
@@ -61,14 +66,12 @@ const Cart = () => {
               <span> Сума замовлення: <b>{totalPrice}грн</b> </span>
             </div>
             <div className={styles.cart__bottom_buttons}>
-              <Link href="/">
-                <button className={styles.button_go_back}>
-                  <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7 13L1 6.93015L6.86175 1" stroke="#00000080" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  <span>Продовжити покупки</span>
-                </button>
-              </Link>
+              <button className={styles.button_go_back} onClick={onClickBack}>
+                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 13L1 6.93015L6.86175 1" stroke="#00000080" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                <span>Продовжити покупки</span>
+              </button>
               <button className={styles.button_pay_btn}>
                 <span>Оформити замовлення</span>
               </button>

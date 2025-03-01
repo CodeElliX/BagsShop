@@ -1,26 +1,27 @@
-html,
-body {
-    margin: 0 auto;
-    padding: 0;
-    box-sizing: border-box;
+.all_product__wrap {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 100%;
     background-image: url("/BagsShop/background.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    gap: 50px;
 }
 
-.body_layout {
-    font-size: 30px;
+.aside {
+    margin-left: 20px;
+}
+
+.all_products__content {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
-    min-height: max-content;
+    width: 80%;
+    gap: 20px;
+    margin-bottom: 40px;
 }
 
-a {
+/* .all_products__content a {
     text-decoration: none;
     color: inherit;
-}
+} */

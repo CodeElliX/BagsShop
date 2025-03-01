@@ -9,26 +9,28 @@ const Filters = (props) => {
     const dispatch = useDispatch();
     const activeFilters = useSelector(state => state.filter);
 
+
     const dataArray = props.from === "backpacks"
         ? props.backpacksItems
         : props.from === "bags"
             ? props.bagsItems
             : props.from === "wallets"
                 ? props.walletsItems
-                : props.from === "home"
-                    ? [...props.backpacksItems, ...props.bagsItems, ...props.walletsItems] // Объединяем данные всех товаров
+                : props.from === "all-products"
+                    ? [...props.backpacksItems, ...props.bagsItems, ...props.walletsItems]
                     : [];
 
     const colours = [...new Set(dataArray.map((el) => el.color))];
     const series = [... new Set(dataArray.map((el) => el.series))];
     const classification = dataArray.map((el) => el.classification);
-    const structures = [... new Set(dataArray.map((el) => el.structure))];
+    const structures = [... new Set(dataArray.map((el) => el.structures))];
     const compartments = [...new Set(dataArray.map((el) => Number(el.compartments)))];
     const categoryes = [...new Set(dataArray.map((el) => el.category))];
     const gender = [...new Set(dataArray.map(el => el.gender))];
-    const allProductsGroop = ["Рюкзаки", "Сумки", "Гаманці"]
+    const allProductsGroop = ["Рюкзаки", "Сумки", "Гаманці"];
 
-    if (path === "/") {
+
+    if (path === "/all-products/") {
         return (
             <aside className={styles.filter__wrap}>
                 <article className={styles.products_groop}>
@@ -187,11 +189,19 @@ const Filters = (props) => {
                     )}
                 </article>
             )}
-            {structures.some(el => el !== "0") && (
+            {props.from === "backpacks" && structures.some(el => el !== "0") && (
                 <article className={styles.products_groop}>
                     <h4>Конструкція спинки</h4>
                     {structures.map((el, index) => {
-                        return <span key={index}><input type="checkbox" checked={activeFilters.structures.includes(el)} onChange={() => dispatch(toggleFilter({ filterType: "structures", value: el }))} />{el}</span>
+                        return <span key={index}>
+                            <input type="checkbox"
+                                checked={activeFilters.structures.includes(el)}
+                                onChange={() => {
+                                    dispatch(toggleFilter({ filterType: "structures", value: el }));
+                                }}
+                            />
+                            {el}
+                        </span>
                     })}
                 </article>
             )}

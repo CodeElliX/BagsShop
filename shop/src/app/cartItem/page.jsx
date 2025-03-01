@@ -16,7 +16,7 @@ const CartItem = ({ id, name, art, price, image, count }) => {
         dispatch(addCount(id));
     }
     const onClickRemove = () => {
-        dispatch(removeItem(id));
+        dispatch(removeItem({id, art}));
     }
     
     return (

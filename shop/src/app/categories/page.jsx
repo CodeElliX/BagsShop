@@ -6,7 +6,7 @@ const Categories = () => {
         <div className={styles.categories}>
             <ul className={styles.category__sections}>
                 <li>
-                    <Link href="/" className={styles.category__link}>
+                    <Link href="/all-products" className={styles.category__link}>
                         <span>
                             Усі товари
                             <svg height="48" viewBox="4 4 40 40" width="48"

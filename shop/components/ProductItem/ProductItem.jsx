@@ -14,9 +14,12 @@ const ProductItem = () => {
     const productId = searchParams.get("id");
     const from = searchParams.get("from");
     const dispatch = useDispatch();
+    const [btnProduct, setBtnProduct] = useState(false);
+
 
 
     const setClickButton = () => {
+        setBtnProduct(!btnProduct);
         if (product) {
             const item = {
                 id: product.id,
@@ -28,6 +31,13 @@ const ProductItem = () => {
             dispatch(addItem(item))
         }
     }
+
+    const removeItemClickButton = () => {
+        setBtnProduct(!btnProduct);
+        if (product) {
+            dispatch(removeItem({ id: product.id, art: product.art }));
+        }
+    };
 
     useEffect(() => {
         if (productId && from) {
@@ -65,7 +75,10 @@ const ProductItem = () => {
                 <p>Артикул: {art}</p>
                 <span className={styles.productItem__availability_status}>{available}</span>
                 <span className={styles.productItem__price}>{price}грн</span>
-                <button onClick={setClickButton} className={styles.productItem__add_product_button}>Додати до кошика</button>
+                {!btnProduct
+                    ? (<button onClick={setClickButton} className={styles.productItem__add_product_button}>Додати до кошика</button>)
+                    : (<button onClick={removeItemClickButton} className={styles.productItem__add_product_button}>Додано в кошик &#10003;</button>)
+                }
                 <div className={styles.productItem__description}>
                     <div className={styles.list_item}><span className={styles.key}>Матеіал</span><span className={styles.value}>{material}</span></div>
                     <div className={styles.list_item}><span className={styles.key}>Розмір, см</span><span className={styles.value}>38x36x7</span></div>

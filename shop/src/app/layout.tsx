@@ -22,12 +22,16 @@ export default function RootLayout({
       <body className={nunito.className}>
         <div className="body_layout">
           <Provider store={store}>
-            <Header />
-            {pathname !== "/cart" && (
+            {pathname !== "/" && (
+              <Header />
+            )}
+            {pathname !== "/" && pathname !== "/cart" && (
               <Categories />
             )}
             {children}
+            {pathname !== "/" && (
             <Footer />
+          )}
           </Provider>
         </div>
       </body>

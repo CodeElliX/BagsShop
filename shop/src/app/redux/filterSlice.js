@@ -24,7 +24,7 @@ export const filterSlice = createSlice({
       if (state[filterType].includes(value)) {
         state[filterType] = state[filterType].filter(item => item !== value);
       } else {
-        state[filterType].push(value);
+        state[filterType] = [...state[filterType], value];
       }
     },
     resetFilters: () => initialState,

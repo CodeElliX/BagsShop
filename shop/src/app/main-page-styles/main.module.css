@@ -1,0 +1,155 @@
+.main_page {
+    display: flex;
+    flex-direction: column;
+    width: 212vh;
+    height: 100%;
+}
+
+.main_page__head {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    position: relative;
+    background-image: url('/BagsShop/main_head.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.main_page__head h1 {
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    color: white;
+    text-shadow: 1px 1px #64C9C1;
+    position: absolute;
+    font-size: 48px;
+    font-style: italic;
+    right: 40px;
+    top: 20px;
+}
+
+.main_page__logo {
+    position: absolute;
+    top: 0;
+    left: 30px;
+}
+
+.main_page__section2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    justify-content: space-around;
+    gap: 10px;
+    margin-bottom: 60px;
+}
+
+.main_page__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 300ms ease-in-out;
+    border-radius: 2px;
+    flex: 1px;
+}
+
+.main_page__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0px 20px;
+    height: 120px;
+    font-size: 22px;
+    font-weight: bold;
+    opacity: 0.6;
+}
+
+.main_page__item svg {
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+
+.main_page__item h3 {
+    line-height: 1;
+    flex-wrap: nowrap;
+}
+
+.main_page__box:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 22px rgba(0, 0, 0, 0.3);
+    clip-path: inset(0 -10px -10px 0);
+}
+
+.main_page__section3 {
+    display: flex;
+    justify-content: space-around;
+    background-image: url('/BagsShop/backline.png');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 50vh;
+    margin-bottom: 60px;
+}
+
+.main_page__section3 h4 {
+    font-size: 22px;
+}
+
+.main_page__stiker {
+    position: relative;
+}
+
+.main_page__stiker_bag {
+    position: absolute;
+    left: 40px;
+    top: 20px;
+    transition: transform 200ms ease-in-out;
+}
+
+.main_page__stiker_bag:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.main_page__view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.7;
+    gap: 0;
+}
+
+.main_page__view svg{
+   width: 150px;
+   transition: transform 200ms ease-in-out;
+   cursor: pointer;
+}
+
+.main_page__view svg:hover{
+   width: 150px;
+   transform: scale(1.1);
+}
+
+.main_page__view h4{
+    margin-bottom: 0;
+}
+
+.main_page__section4 {
+    display: flex;
+    justify-content: space-around;
+    background-image: url('/BagsShop/kids_bunner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 50vh;
+    margin-bottom: 60px;
+    border-radius: 20px;
+}

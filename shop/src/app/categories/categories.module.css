@@ -48,8 +48,8 @@
 .category__link:hover {
     cursor: pointer;
     /* background: linear-gradient(#5CC1C1, #096c5d); */
-    /* background-color: #A3D4D8; */
-    background: linear-gradient(.25turn, #A3D4D8, rgba(238, 201, 0, 0.4));
+    background-color: #EED3CE;
+    /* background: linear-gradient(.25turn, #A3D4D8, rgba(238, 201, 0, 0.4)); */
 
 }
 

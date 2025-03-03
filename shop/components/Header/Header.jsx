@@ -3,7 +3,7 @@ import Search from "../../src/app/search/page";
 import styles from "./header.module.css";
 import Link from "next/link";
 import Image from 'next/image'
-import logo from "../../public/logo.png";
+import logo from "../../public/logo_2.png";
 import { usePathname } from "next/navigation";
 
 const Header = () => {
@@ -15,6 +15,7 @@ const Header = () => {
       <Image src={logo} alt="logo" className={styles.logo} priority />
     </Link>
     {pathname !== '/cart' && (
+      <>
       <div className={styles.header__right_side}>
         <Search />
         <button className={styles.cart_button}>
@@ -27,9 +28,10 @@ const Header = () => {
               <path d="M62.5,144H188.1a15.9,15.9,0,0,0,15.7-13.1L216,64H48" fill="none" stroke="black" strokeLinecap="round" strokeLinejoin="round" strokeWidth="10" />
             </svg>
           </Link>
-
         </button>
       </div>
+      <Image src={'/BagsShop/lozung_2.png'} alt="lozung" className={styles.header__lozung} width={200} height={200} priority />
+      </>
     )}
 
   </div>

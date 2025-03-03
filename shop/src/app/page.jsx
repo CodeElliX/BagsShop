@@ -1,6 +1,8 @@
 import styles from './main-page-styles/main.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
+import Footer from './footer/page';
+import CategoriesSlider from './categoriesSlider/page'
 
 
 export default function Home() {
@@ -8,8 +10,8 @@ export default function Home() {
   return (
     <div className={styles.main_page}>
       <div className={styles.main_page__head}>
-        <Image src={'./logo.png'} alt="logo" className={styles.main_page__logo} width={260} height={220} priority />
-        <h1>Твій ідеальний аксесуар вже чекає на тебе!</h1>
+        <Image src={'./logo_2.png'} alt="logo" className={styles.main_page__logo} width={260} height={220} priority />
+        <Image src={'./lozung_2.png'} alt="lozung" className={styles.main_page__lozung} width={200} height={200} priority />
       </div>
       <section className={styles.main_page__section2}>
         <div className={styles.main_page__box}>
@@ -102,18 +104,85 @@ export default function Home() {
         <section className={styles.main_page__view}>
           <h4>Переглянути усі товари</h4>
           <Link href="/all-products">
-          <svg viewBox="0 0 512 512">
-            <title />
-            <g>
-              <path d="M72.86,407.49H69.13a15,15,0,0,1-15-15V282.25C54.13,201.62,119.74,136,200.37,136h50.21V70.75a15,15,0,0,1,25-11.14L451.18,217.88a15,15,0,0,1,0,22.28L275.63,398.44a15,15,0,0,1-25-11.15V322H183.65a99.52,99.52,0,0,0-96.28,74.25A15,15,0,0,1,72.86,407.49ZM183.65,292h81.93a15,15,0,0,1,15,15v46.54L418.73,229,280.58,104.47V151a15,15,0,0,1-15,15H200.37A116.37,116.37,0,0,0,84.13,282.25v56.36A129.6,129.6,0,0,1,183.65,292Z" />
-            </g>
-          </svg>
+            <svg viewBox="0 0 512 512">
+              <title />
+              <g>
+                <path d="M72.86,407.49H69.13a15,15,0,0,1-15-15V282.25C54.13,201.62,119.74,136,200.37,136h50.21V70.75a15,15,0,0,1,25-11.14L451.18,217.88a15,15,0,0,1,0,22.28L275.63,398.44a15,15,0,0,1-25-11.15V322H183.65a99.52,99.52,0,0,0-96.28,74.25A15,15,0,0,1,72.86,407.49ZM183.65,292h81.93a15,15,0,0,1,15,15v46.54L418.73,229,280.58,104.47V151a15,15,0,0,1-15,15H200.37A116.37,116.37,0,0,0,84.13,282.25v56.36A129.6,129.6,0,0,1,183.65,292Z" />
+              </g>
+            </svg>
           </Link>
         </section>
       </section>
       <section className={styles.main_page__section4}>
-
+        <span className={styles.main_page__section4_message}>
+          <h4><i>Рюкзаки</i> <br /> для школи <br /> та дошкільнят</h4>
+        </span>
       </section>
+      <section className={styles.main_page__section5}>
+        <div className={styles.main_page__section5_photo}>
+          <Image src={'/BagsShop/woomen4.jpg'} alt="woomen4" className={styles.section5_photo1} width={200} height={250} priority />
+          <Image src={'/BagsShop/woomen3.jpg'} alt="woomen3" className={styles.section5_photo2} width={200} height={250} priority />
+          <Image src={'/BagsShop/men1.jpg'} alt="men1" className={styles.section5_photo3} width={300} height={250} priority />
+          <Image src={'/BagsShop/men3.jpg'} alt="men2" className={styles.section5_photo4} width={250} height={300} priority />
+        </div>
+        <div className={styles.main_page__section5_description}>
+          <h1>Bags Shops – магазин рюкзаків, сумок та аксесуарів</h1>
+          <p>З <b>Bags Shops</b> кожен день стає зручним, стильним і натхненним! У нашому інтернет-магазині ви знайдете широкий вибір рюкзаків для дітей і дорослих, сумок, гаманців та аксесуарів, які підкреслять вашу індивідуальність і зроблять щоденне життя комфортнішим.</p>
+
+          <p>Ми зібрали для вас найкращі моделі від різних брендів – як популярні, так і унікальні, щоб кожен міг знайти ідеальний варіант для навчання, роботи, подорожей або прогулянок.</p>
+
+          <p><b>Bags Shops</b> – це про якість, стиль і зручність. Ми допомагаємо вам обирати аксесуари, які доповнюють образ, роблять життя впорядкованішим та додають впевненості.</p>
+
+          <p>Обирайте комфорт і стиль разом з <b>Bags Shops</b> – і вперед до нових звершень! 🚀</p>
+          <Link href="/all-products">
+            <button>Переглянути усі товари</button>
+          </Link>
+        </div>
+        <div className={styles.main_page__section5_photo}>
+          <Image src={'/BagsShop/woomen5.jpg'} alt="woomen_bag" className={styles.section5_photo5} width={200} height={250} priority />
+        </div>
+      </section>
+      <section className={styles.main_page__section6}>
+        {/* <div className={styles.section6_photos}>
+          <div className={styles.section6_photo1}>
+            <Image src={'/BagsShop/bunanka.png'} alt="card_sections1" width={200} height={150} priority />
+          </div>
+          <div className={styles.section6_photo1}>
+            <Image src={'/BagsShop/bags_school.png'} alt="card_sections1" width={200} height={150} priority />
+          </div>
+          <div className={styles.section6_photo1}>
+            <Image src={'/BagsShop/cross_body.png'} alt="card_sections1" width={200} height={150} priority />
+          </div>
+          <div className={styles.section6_photo1}>
+            <Image src={'/BagsShop/wallets.png'} alt="card_sections1" width={200} height={150} priority />
+          </div>
+          <div className={styles.section6_photo1}>
+            <Image src={'/BagsShop/bags_old.png'} alt="card_sections1" width={200} height={150} priority />
+          </div>
+          <div className={styles.section6_photo1}>
+            <Image src={'/BagsShop/shopers.png'} alt="card_sections1" width={200} height={150} priority />
+          </div>
+          <div className={styles.section6_photo1}>
+            <Image src={'/BagsShop/bags_kids.png'} alt="card_sections1" width={200} height={150} priority />
+          </div>
+        </div>
+        <div className={styles.arrows}>
+          <div className={styles.arrow_left}>
+            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M15 5l-8 7 8 7" />
+            </svg>
+          </div>
+          <div className={styles.arrow_right}>
+            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M8 5l8 7-8 7" />
+            </svg>
+          </div>
+        </div> */}
+        <CategoriesSlider />
+      </section>
+      <Footer />
     </div>
   );
 }
+
+//бананки,  рюкзаки для школи, крос-боді, гаманці, рюкзаки для дорослих, сумки-шопери, рюкзки для дошкільнят

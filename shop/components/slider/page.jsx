@@ -1,37 +1,85 @@
 
 "use client";
-import { useState } from "react";
 import styles from "./slider.module.css";
 import Image from "next/image";
+import { useRef, useState, useLayoutEffect, useEffect } from "react";
 
-const Slider = ({ image = [] }) => {
-    const [currentIndex, setCurrentIndex] = useState(0);
+const CategoriesSlider = ({ image }) => {
+    const sliderRef = useRef(null);
+    const slideRef = useRef(null);
+    const [index, setIndex] = useState(0);
+    const [cardWidth, setCardWidth] = useState(null);
+    const [activeImage, setActiveImage] = useState(image[0]);
 
-    const onClickArrowNext = () => {
-        setCurrentIndex((prevIndex) => {
-          return prevIndex < image.length - 1 ? prevIndex + 1 : prevIndex
-          
+    useLayoutEffect(() => {
+        if (slideRef.current) {
+            const slideWidth = slideRef.current.offsetWidth;
+            const gap = 10;
+            setCardWidth(slideWidth + gap);
         }
-        );
+    }, []);
+
+    useLayoutEffect(() => {
+        if (!sliderRef.current || cardWidth === null) return;
+
+        sliderRef.current.style.transition = "none";
+        sliderRef.current.style.transform = `translateX(-${image.length * cardWidth}px)`;
+
+        setTimeout(() => {
+            if (sliderRef.current) {
+                sliderRef.current.style.transition = "transform 0.5s ease-in-out";
+            }
+            setIndex(image.length);
+        }, 50);
+    }, [cardWidth]);
+
+    const changeActiveImage = (direction) => {
+        const currentIndex = image.indexOf(activeImage);
+        let newIndex = direction === "next" ? currentIndex + 1 : currentIndex - 1;
+
+        if (newIndex >= image.length) newIndex = 0;
+        if (newIndex < 0) newIndex = image.length - 1;
+
+        setActiveImage(image[newIndex]);
+        scrollToActiveSlide(newIndex);
     };
 
-    const onClickArrowPrev = () => {
-        setCurrentIndex((prevIndex) =>
-            prevIndex > 0 ? prevIndex - 1 : prevIndex
-        );
+    const handleImageClick = (img) => {
+        const newIndex = image.indexOf(img);
+        setActiveImage(img);
+        scrollToActiveSlide(newIndex);
     };
+
+    const scrollToActiveSlide = (newIndex) => {
+        if (!sliderRef.current || cardWidth === null) return;
+
+        const visibleSlides = Math.floor(sliderRef.current.offsetWidth / cardWidth);
+        const firstVisibleIndex = Math.max(index - visibleSlides + 1, 0);
+        const lastVisibleIndex = index;
+
+        if (newIndex < firstVisibleIndex || newIndex > lastVisibleIndex) {
+            const newScrollIndex = Math.max(0, newIndex - Math.floor(visibleSlides / 2));
+            sliderRef.current.style.transition = "transform 0.5s ease-in-out";
+            sliderRef.current.style.transform = `translateX(-${newScrollIndex * cardWidth}px)`;
+            setIndex(newScrollIndex);
+        }
+    };
+
+    const handleLeftArrowClick = () => changeActiveImage("prev");
+    const handleRightArrowClick = () => changeActiveImage("next");
 
     return (
-        <div className={styles.slider_wrap}>
-            <div className={styles.slider__icons}>
-                <svg onClick={onClickArrowPrev} className={styles.arrow_left} viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M64,0a64,64,0,1,0,64,64A64.07,64.07,0,0,0,64,0Zm0,122a58,58,0,1,1,58-58A58.07,58.07,0,0,1,64,122Z" />
-                    <path d="M74.12,35.88a3,3,0,0,0-4.24,0l-26,26a3,3,0,0,0,0,4.24l26,26a3,3,0,0,0,4.24-4.24L50.24,64,74.12,40.12A3,3,0,0,0,74.12,35.88Z" />
-                </svg>
+        <div className={styles.wrap}>
+            <div className={styles.mainImageContainer}>
+                <div className={styles.arrow_left} onClick={handleLeftArrowClick}>
+                    <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M15 5l-8 7 8 7" />
+                    </svg>
+                </div>
 
                 {image.length > 0 && (
                     <Image
-                        src={image[currentIndex]}
+                        src={activeImage}
                         alt="product image"
                         width={400}
                         height={400}
@@ -39,26 +87,45 @@ const Slider = ({ image = [] }) => {
                     />
                 )}
 
-                <svg onClick={onClickArrowNext} className={styles.arrow_right} viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M64,0a64,64,0,1,0,64,64A64.07,64.07,0,0,0,64,0Zm0,122a58,58,0,1,1,58-58A58.07,58.07,0,0,1,64,122Z" />
-                    <path d="M58.12,35.88a3,3,0,0,0-4.24,4.24L77.76,64,53.88,87.88a3,3,0,1,0,4.24,4.24l26-26a3,3,0,0,0,0-4.24Z" />
-                </svg>
+                <div className={styles.arrow_right} onClick={handleRightArrowClick}>
+                    <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M8 5l8 7-8 7" />
+                    </svg>
+                </div>
             </div>
 
-            <section className={styles.slider__next} style={{ transform: `translateX(-${currentIndex * 105}px)` }}>
-                {image.map((img, index) => {
-                    let position = index === currentIndex ? styles.activeSlide : styles.nextSlide;
+            <div className={styles.sliderContainer}>
+                <div className={styles.sliderWrapper}>
+                    <div className={styles.slider} ref={sliderRef}>
+                        {[...image, ...image, ...image].map((img, i) => (
+                            <div
+                                key={i}
+                                className={`${styles.slide} ${img === activeImage ? styles.activeSlide : ""}`}
+                                ref={i === 0 ? slideRef : null}
+                                onClick={() => handleImageClick(img)}
+                            >
+                                <Image src={img} alt="card" width={150} height={150} priority />
+                            </div>
+                        ))}
+                    </div>
+                </div>
 
-                    return (
-                        <div key={index} className={position}>
-                            <Image width={100} height={100} src={img} alt="icon" className={styles.slider__next_img} />
-                        </div>
-                    );
-                })}
-            </section>
-
+                <div className={styles.arrows}>
+                    <div className={styles.arrow_left} onClick={handleLeftArrowClick}>
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M15 5l-8 7 8 7" />
+                        </svg>
+                    </div>
+                    <div className={styles.arrow_right} onClick={handleRightArrowClick}>
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M8 5l8 7-8 7" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };
 
-export default Slider;
+export default CategoriesSlider;
+

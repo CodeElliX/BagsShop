@@ -1,5 +1,4 @@
 .sliderContainer {
-    position: relative;
     width: 100%;
 }
 
@@ -7,35 +6,44 @@
     width: 100%;
     overflow: hidden;
     margin: 0 auto;
+    height: 30vh;
 }
 
 .slider {
     display: flex;
     gap: 20px;
-    transition: transform 0.3s ease-in-out;
-    outline: 1px solid green; 
+    transition: transform 0.5s ease-in-out;
+    position: relative;
 }
 
 .slide {
     overflow: hidden;
     flex-shrink: 0;
-    width: 200px;
+    width: 250px;
     border-radius: 20px;
     background-color: #fff;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.4);
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin: 10px 10px; */
 }
 
 .slide img {
     transition: transform 0.2s ease-in-out;
-} 
+}
 
 .slide img:hover {
     cursor: pointer;
-    transform: scale(1.1);
+    transform: scale(1.2);
+}
+
+.arrows {
+    height: max-content;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 45%;
 }
 
 .arrow_left,
@@ -51,7 +59,6 @@
     align-items: center;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
-    top: 50%;
     transform: translateY(-50%);
 }
 
@@ -67,6 +74,19 @@
 .arrow_right:hover {
     background-color: rgba(187, 175, 232, 0.5);
     cursor: pointer;
+}
+
+.arrow_left svg,
+.arrow_right svg {
+    transition: transform 0.2s ease-in-out;
+}
+
+.arrow_left:hover svg {
+    transform: translateX(-5px);
+}
+
+.arrow_right:hover svg {
+    transform: translateX(5px);
 }
 
 .arrow_left:active,

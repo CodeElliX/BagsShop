@@ -9,13 +9,12 @@ import { usePathname } from "next/navigation";
 const Header = () => {
   const pathname = usePathname();
 
-  return <div className={styles.header}>
-    
-    <Link href="/">
-      <Image src={logo} alt="logo" className={styles.logo} priority />
-    </Link>
-    {pathname !== '/cart' && (
-      <>
+  if (pathname === '/cart/') { return };
+  return (
+    <div className={styles.header}>
+      <Link href="/">
+        <Image src={logo} alt="logo" className={styles.logo} priority />
+      </Link>
       <div className={styles.header__right_side}>
         <Search />
         <button className={styles.cart_button}>
@@ -31,10 +30,8 @@ const Header = () => {
         </button>
       </div>
       <Image src={'/BagsShop/lozung_2.png'} alt="lozung" className={styles.header__lozung} width={200} height={200} priority />
-      </>
-    )}
-
-  </div>
+    </div>
+  )
 }
 
 export default Header;

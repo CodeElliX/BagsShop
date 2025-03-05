@@ -1,6 +1,6 @@
 "use client"
 import styles from "./cart.module.css"
-import CartItem from '../cartItem/page'
+import CartItem from '../../../components/cartItem/page'
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useRef } from "react";
 import { removeAllItems } from '../redux/cartSlice'

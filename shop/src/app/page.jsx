@@ -4,7 +4,6 @@ import Link from 'next/link';
 import Footer from './footer/page';
 import CategoriesSlider from './categoriesSlider/page'
 
-
 export default function Home() {
 
   return (
@@ -72,33 +71,33 @@ export default function Home() {
       </section>
       <section className={styles.main_page__section3}>
         <div className={styles.main_page__stiker}>
-          <Image src={'./green_stiker.png'} alt="green_stiker" className={styles.main_page__stiker} width={200} height={200} priority />
+          <Image src={'./green_stiker.png'} alt="green_stiker" className={styles.main_page__stiker} width={200} height={200} />
           <Link href="/bags">
-            <Image src={'./bag2.png'} alt="yellow_stiker" className={styles.main_page__stiker_bag} width={120} height={150} priority />
+            <Image src={'./bag2.png'} alt="yellow_stiker" className={styles.main_page__stiker_bag} width={120} height={150} />
           </Link>
         </div>
         <div className={styles.main_page__stiker}>
-          <Image src={'./lilac_stiker.png'} alt="lilac_stiker" className={styles.main_page__stiker} width={200} height={200} priority />
+          <Image src={'./lilac_stiker.png'} alt="lilac_stiker" className={styles.main_page__stiker} width={200} height={200} />
           <Link href="/backpacks">
-            <Image src={'./backpack2.png'} alt="yellow_stiker" className={styles.main_page__stiker_bag} width={120} height={150} priority />
+            <Image src={'./backpack2.png'} alt="yellow_stiker" className={styles.main_page__stiker_bag} width={120} height={150} />
           </Link>
         </div>
         <div className={styles.main_page__stiker}>
-          <Image src={'./pink_stiker.png'} alt="pink_stiker" className={styles.main_page__stiker} width={200} height={200} priority />
+          <Image src={'./pink_stiker.png'} alt="pink_stiker" className={styles.main_page__stiker} width={200} height={200} />
           <Link href="/bags">
-            <Image src={'./bag1.png'} alt="yellow_stiker" className={styles.main_page__stiker_bag} width={120} height={150} priority />
+            <Image src={'./bag1.png'} alt="yellow_stiker" className={styles.main_page__stiker_bag} width={120} height={150} />
           </Link>
         </div>
         <div className={styles.main_page__stiker}>
           <Image src={'./yellow_stiker.png'} alt="yellow_stiker" width={200} height={200} priority />
           <Link href="/backpacks">
-            <Image src={'./backpack1.png'} alt="yellow_stiker" className={styles.main_page__stiker_bag} width={120} height={150} priority />
+            <Image src={'./backpack1.png'} alt="yellow_stiker" className={styles.main_page__stiker_bag} width={120} height={150} />
           </Link>
         </div>
         <div className={styles.main_page__stiker}>
-          <Image src={'./light_green_stiker.png'} alt="light_green" className={styles.main_page__stiker} width={200} height={200} priority />
+          <Image src={'./light_green_stiker.png'} alt="light_green" className={styles.main_page__stiker} width={200} height={200} />
           <Link href="/wallets">
-            <Image src={'./wallet1.png'} alt="yellow_stiker" className={styles.main_page__stiker_bag} width={120} height={150} priority />
+            <Image src={'./wallet1.png'} alt="yellow_stiker" className={styles.main_page__stiker_bag} width={120} height={150} />
           </Link>
         </div>
         <section className={styles.main_page__view}>

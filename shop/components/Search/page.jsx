@@ -2,7 +2,7 @@
 import { useState, useRef, useCallback } from 'react';
 import styles from './search.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { setSearchValue } from '../redux/filterSlice'
+import { setSearchValue } from '../../src/app/redux/filterSlice'
 import debounce from 'lodash.debounce';
 
 const Search = () => {
@@ -34,10 +34,8 @@ const Search = () => {
             <svg
                 className={styles.icon}
                 enableBackground='new 0 0 32 32'
-                id='Editable-line'
                 version='1.1'
                 viewBox='0 0 32 32'
-                xmlns='http://www.w3.org/2000/svg'
             >
                 <circle
                     cx='14'

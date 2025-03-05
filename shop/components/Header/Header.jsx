@@ -1,5 +1,5 @@
 'use client'
-import Search from "../../src/app/search/page";
+import Search from "../Search/page";
 import styles from "./header.module.css";
 import Link from "next/link";
 import Image from 'next/image'

@@ -1,8 +1,8 @@
 import styles from './main-page-styles/main.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
-import Footer from './footer/page';
-import CategoriesSlider from './categoriesSlider/page'
+import Footer from '../../components/footer/page';
+import CategoriesSlider from '../../components/categoriesSlider/page'
 
 export default function Home() {
 
@@ -142,46 +142,9 @@ export default function Home() {
         </div>
       </section>
       <section className={styles.main_page__section6}>
-        {/* <div className={styles.section6_photos}>
-          <div className={styles.section6_photo1}>
-            <Image src={'/BagsShop/bunanka.png'} alt="card_sections1" width={200} height={150} priority />
-          </div>
-          <div className={styles.section6_photo1}>
-            <Image src={'/BagsShop/bags_school.png'} alt="card_sections1" width={200} height={150} priority />
-          </div>
-          <div className={styles.section6_photo1}>
-            <Image src={'/BagsShop/cross_body.png'} alt="card_sections1" width={200} height={150} priority />
-          </div>
-          <div className={styles.section6_photo1}>
-            <Image src={'/BagsShop/wallets.png'} alt="card_sections1" width={200} height={150} priority />
-          </div>
-          <div className={styles.section6_photo1}>
-            <Image src={'/BagsShop/bags_old.png'} alt="card_sections1" width={200} height={150} priority />
-          </div>
-          <div className={styles.section6_photo1}>
-            <Image src={'/BagsShop/shopers.png'} alt="card_sections1" width={200} height={150} priority />
-          </div>
-          <div className={styles.section6_photo1}>
-            <Image src={'/BagsShop/bags_kids.png'} alt="card_sections1" width={200} height={150} priority />
-          </div>
-        </div>
-        <div className={styles.arrows}>
-          <div className={styles.arrow_left}>
-            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M15 5l-8 7 8 7" />
-            </svg>
-          </div>
-          <div className={styles.arrow_right}>
-            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M8 5l8 7-8 7" />
-            </svg>
-          </div>
-        </div> */}
         <CategoriesSlider />
       </section>
       <Footer />
     </div>
   );
 }
-
-//бананки,  рюкзаки для школи, крос-боді, гаманці, рюкзаки для дорослих, сумки-шопери, рюкзки для дошкільнят

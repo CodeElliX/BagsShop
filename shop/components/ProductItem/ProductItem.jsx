@@ -1,12 +1,11 @@
 "use client";
-import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useSearchParams } from "next/navigation";
 import axios from 'axios';
 import styles from './productItem.module.css';
 import Slider from '../slider/page';
-import { minusCount, addCount, addItem, removeItem } from '@/app/redux/cartSlice';
+import { addItem, removeItem } from '@/app/redux/cartSlice';
 
 const ProductItem = () => {
     const [product, setProduct] = useState(null);
@@ -15,7 +14,6 @@ const ProductItem = () => {
     const from = searchParams.get("from");
     const dispatch = useDispatch();
     const [btnProduct, setBtnProduct] = useState(false);
-
 
 
     const setClickButton = () => {
@@ -93,4 +91,5 @@ const ProductItem = () => {
     );
 
 }
-export default dynamic(() => Promise.resolve(ProductItem), { ssr: false });
+
+export default ProductItem;

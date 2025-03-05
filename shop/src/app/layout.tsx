@@ -5,10 +5,10 @@ import Header from "../../components/Header/Header";
 import { Provider, useDispatch } from "react-redux";
 import { store } from "./redux/store"
 import { Nunito } from 'next/font/google';
-import Footer from "./footer/page";
-import Categories from "./categories/page";
+import Footer from "../../components/footer/page";
+import Categories from "../../components/categories/page";
 import { usePathname } from "next/navigation";
-import ScrollToUp from './scroll-up/page'
+import ScrollToUp from '../../components/scroll-up/page'
 import { useEffect } from "react";
 import { getCartFromLS } from './utils/getCartFromLS'
 import { setCart } from "./redux/cartSlice";

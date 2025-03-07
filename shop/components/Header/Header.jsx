@@ -19,7 +19,7 @@ const Header = () => {
         <Search />
         <button className={styles.cart_button}>
           <Link href="/cart">
-            <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 256 256">
               <rect fill="none" height="256" width="256" />
               <path d="M184,184H69.8L41.9,30.6A8,8,0,0,0,34.1,24H16" fill="none" stroke="black" strokeLinecap="round" strokeLinejoin="round" strokeWidth="10" />
               <circle cx="80" cy="204" fill="none" r="20" stroke="black" strokeLinecap="round" strokeLinejoin="round" strokeWidth="10" />

@@ -1,5 +1,4 @@
 'use client'
-
 import "./globals.css";
 import Header from "../../components/Header/Header";
 import { Provider, useDispatch } from "react-redux";

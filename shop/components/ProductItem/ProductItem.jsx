@@ -5,7 +5,7 @@ import { useSearchParams } from "next/navigation";
 import axios from 'axios';
 import styles from './productItem.module.css';
 import Slider from '../slider/page';
-import { addItem, removeItem } from '@/app/redux/cartSlice';
+import { addItem, removeItem } from '../../src/app/redux/cartSlice';
 
 const ProductItem = () => {
     const [product, setProduct] = useState(null);

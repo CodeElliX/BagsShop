@@ -3,6 +3,7 @@ import { calcTotalCount } from './calcTotalCount';
 import { calcTotalPrice } from './calcTotalPrice';
 
 export const getCartFromLS = () => {
+    try{
     if (typeof window === 'undefined') {
         return {
             items: [],
@@ -19,6 +20,14 @@ export const getCartFromLS = () => {
         totalPrice: calcTotalPrice(Array.isArray(items) ? items : []),
         totalCount: calcTotalCount(Array.isArray(items) ? items : [])
     };
+}
+catch{
+  return {
+    items: [],
+    totalPrice: 0,
+    totalCount: 0,
+};
+}
 };
 
 

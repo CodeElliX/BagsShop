@@ -9,7 +9,7 @@ import { usePathname } from "next/navigation";
 const Header = () => {
   const pathname = usePathname();
 
-  if (pathname === '/cart/') { return };
+  if (pathname === '/cartPage/') { return };
   return (
     <div className={styles.header}>
       <Link href="/">
@@ -18,7 +18,7 @@ const Header = () => {
       <div className={styles.header__right_side}>
         <Search />
         <button className={styles.cart_button}>
-          <Link href="/cart">
+          <Link href="/cartPage">
             <svg viewBox="0 0 256 256">
               <rect fill="none" height="256" width="256" />
               <path d="M184,184H69.8L41.9,30.6A8,8,0,0,0,34.1,24H16" fill="none" stroke="black" strokeLinecap="round" strokeLinejoin="round" strokeWidth="10" />

@@ -7,7 +7,7 @@ import { removeAllItems } from '../redux/cartSlice'
 import CartEmpty from '../cartEmpty/page'
 import { useRouter } from "next/navigation";
 
-const Cart = () => {
+const cartPage = () => {
   const totalPrice = useSelector(state => state.cart.totalPrice);
   const cartItems = useSelector(state => state.cart.items);
   const totalCount = useSelector(state => state.cart.totalCount);
@@ -83,4 +83,4 @@ const Cart = () => {
   )
 }
 
-export default Cart;
+export default cartPage;

@@ -2,17 +2,17 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const fetchBackpacks = createAsyncThunk("backpack/fetchBackpacksStatus", async () => {
-    const { data } = await axios.get("/BagsShop/backpackData.json")
+    const { data } = await axios.get("/backpackData.json")
     return data;
 })
 
 export const fetchBags = createAsyncThunk("bag/fetchBagsStatus", async () => {
-    const { data } = await axios.get("/BagsShop/bagsData.json")
+    const { data } = await axios.get("/bagsData.json")
     return data;
 })
 
 export const fetchWallets = createAsyncThunk("wallet/fetchWalletsStatus", async () => {
-    const { data } = await axios.get("/BagsShop/walletsData.json")
+    const { data } = await axios.get("/walletsData.json")
     return data;
 })
 

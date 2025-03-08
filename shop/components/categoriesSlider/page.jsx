@@ -4,13 +4,13 @@ import Image from "next/image";
 import { useRef, useState, useLayoutEffect } from "react";
 
 const images = [
-    "/BagsShop/bunanka.png",
-    "/BagsShop/bags_school.png",
-    "/BagsShop/cross_body.png",
-    "/BagsShop/wallets.png",
-    "/BagsShop/bags_old.png",
-    "/BagsShop/shopers.png",
-    "/BagsShop/bags_kids.png"
+    "/bunanka.png",
+    "/bags_school.png",
+    "/cross_body.png",
+    "/wallets.png",
+    "/bags_old.png",
+    "/shopers.png",
+    "/bags_kids.png"
 ];
 
 const CategoriesSlider = () => {

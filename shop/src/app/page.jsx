@@ -119,10 +119,10 @@ export default function Home() {
       </section>
       <section className={styles.main_page__section5}>
         <div className={styles.main_page__section5_photo}>
-          <Image src={'/BagsShop/woomen4.jpg'} alt="woomen4" className={styles.section5_photo1} width={200} height={250} priority />
-          <Image src={'/BagsShop/woomen3.jpg'} alt="woomen3" className={styles.section5_photo2} width={200} height={250} priority />
-          <Image src={'/BagsShop/men1.jpg'} alt="men1" className={styles.section5_photo3} width={300} height={250} priority />
-          <Image src={'/BagsShop/men3.jpg'} alt="men2" className={styles.section5_photo4} width={250} height={300} priority />
+          <Image src={'/woomen4.jpg'} alt="woomen4" className={styles.section5_photo1} width={200} height={250} priority />
+          <Image src={'/woomen3.jpg'} alt="woomen3" className={styles.section5_photo2} width={200} height={250} priority />
+          <Image src={'/men1.jpg'} alt="men1" className={styles.section5_photo3} width={300} height={250} priority />
+          <Image src={'/men3.jpg'} alt="men2" className={styles.section5_photo4} width={250} height={300} priority />
         </div>
         <div className={styles.main_page__section5_description}>
           <h1>Bags Shops – магазин рюкзаків, сумок та аксесуарів</h1>
@@ -138,7 +138,7 @@ export default function Home() {
           </Link>
         </div>
         <div className={styles.main_page__section5_photo}>
-          <Image src={'/BagsShop/woomen5.jpg'} alt="woomen_bag" className={styles.section5_photo5} width={200} height={250} priority />
+          <Image src={'/woomen5.jpg'} alt="woomen_bag" className={styles.section5_photo5} width={200} height={250} priority />
         </div>
       </section>
       <section className={styles.main_page__section6}>

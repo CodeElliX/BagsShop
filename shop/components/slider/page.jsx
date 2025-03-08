@@ -2,7 +2,7 @@
 "use client";
 import styles from "./slider.module.css";
 import Image from "next/image";
-import { useRef, useState, useLayoutEffect, useEffect } from "react";
+import { useRef, useState, useLayoutEffect } from "react";
 
 const CategoriesSlider = ({ image }) => {
     const sliderRef = useRef(null);

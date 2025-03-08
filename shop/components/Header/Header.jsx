@@ -29,7 +29,7 @@ const Header = () => {
           </Link>
         </button>
       </div>
-      <Image src={'/BagsShop/lozung_2.png'} alt="lozung" className={styles.header__lozung} width={200} height={200} priority />
+      <Image src={'/lozung_2.png'} alt="lozung" className={styles.header__lozung} width={200} height={200} priority />
     </div>
   )
 }

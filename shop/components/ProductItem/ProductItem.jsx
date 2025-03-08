@@ -41,11 +41,11 @@ const ProductItem = () => {
         if (productId && from) {
             async function fetchData() {
                 const dataFile = from === "backpacks"
-                    ? "/BagsShop/backpackData.json"
+                    ? "/backpackData.json"
                     : from === "bags"
-                        ? "/BagsShop/bagsData.json"
+                        ? "/bagsData.json"
                         : from === "wallets"
-                            ? "/BagsShop/walletsData.json"
+                            ? "/walletsData.json"
                             : null;
 
                 const response = await axios.get(dataFile);

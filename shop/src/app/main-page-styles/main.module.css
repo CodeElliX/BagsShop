@@ -1,8 +1,9 @@
 .main_page {
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    width: 212vh;
     height: 100%;
+    width: 100%;
 }
 
 .main_page__head {
@@ -10,7 +11,6 @@
     align-items: center;
     width: 100%;
     height: 70vh;
-    overflow: hidden;
     position: relative;
     background-image: url('/backgr_twince.jpg');
     background-size: cover;
@@ -32,22 +32,16 @@
 
 .main_page__section2 {
     display: flex;
-    justify-content: center;
-    align-items: center;
     padding-top: 60px;
     padding-bottom: 40px;
-    justify-content: space-around;
     gap: 10px;
     margin-bottom: 100px;
 }
 
 .main_page__box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     transition: transform 300ms ease-in-out;
     border-radius: 2px;
-    flex: 1px;
+    flex: 1;
 }
 
 .main_page__item {
@@ -137,7 +131,6 @@
 
 .main_page__section4 {
     display: flex;
-    justify-content: space-around;
     background-image: url('/kids_bunner.jpg');
     background-size: cover;
     background-position: center;
@@ -146,9 +139,6 @@
     height: 50vh;
     margin-bottom: 60px;
     border-radius: 40px;
-}
-
-.main_page__section4 {
     position: relative;
 }
 
@@ -191,11 +181,13 @@
     margin-top: 50px;
 }
 
-.main_page__section5_photo {
+.main_page__section5_photo_left,
+.main_page__section5_photo_right {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .main_page__section5_description {
@@ -242,11 +234,6 @@
 
 .main_page__section5_description button:active {
     background-color: #a18de8;
-}
-
-.main_page__section5_photo {
-    position: relative;
-
 }
 
 .section5_photo1 {
@@ -304,3 +291,154 @@
     margin-top: 100px;
     overflow: hidden;
 }
+
+
+
+@media (max-width: 480px) {
+
+    .main_page__head {
+        height: 30vh;
+    }
+
+    .main_page__lozung {
+        width: 70px;
+        height: 70px;
+    }
+
+    .main_page__logo {
+        top: 30px;
+        left: 10px;
+        width: 20%;
+        height: 40%;
+    }
+
+    .main_page__section2 {
+        padding-top: 0;
+        margin-bottom: 40px;
+        padding-bottom: 0;
+        padding-top: 20px;
+        flex-wrap: wrap;
+    }
+
+    .main_page__box:hover {
+        transform: none;
+        box-shadow: none;
+        clip-path: none;
+    }
+
+    .main_page__item {
+        justify-content: flex-start;
+        height: 40px;
+        font-size: 12px;
+    }
+
+    .main_page__item svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .main_page__section3 {
+        margin-bottom: 40px;
+        padding-bottom: 90px;
+        height: 5vh;
+        gap: 10px;
+    }
+
+    .main_page__stiker {
+        width: 70px;
+        height: 70px;
+    }
+
+    .main_page__stiker_bag {
+        width: 30px;
+        height: 55px;
+        left: 20px;
+        top: 7.5px;
+    }
+
+    .main_page__view {
+        height: 70px;
+        text-align: center;
+    }
+
+    .main_page__view svg {
+        width: 40%;
+        cursor: none;
+    }
+
+    .main_page__view svg:hover {
+        transform: none;
+    }
+
+    .main_page__view h4 {
+        font-size: 12px;
+
+    }
+
+    .main_page__section4 {
+        height: 30vh;
+        border-radius: 20px;
+    }
+
+    .main_page__section4_message {
+        align-items: baseline;
+        border-top-right-radius: 10%;
+        border-bottom-right-radius: 80%;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        left: 0;
+    }
+
+    .main_page__section4_message h4 {
+        font-size: 18px;
+    }
+
+    .main_page__section4_message i {
+        font-size: 28px;
+    }
+
+    .main_page__section5 {
+        height: 50vh;
+        flex-direction: row-reverse;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    .main_page__section5_photo_left {
+        display: none;
+    }
+
+    .main_page__section5_description {
+        height: 50vh;
+    }
+
+    .main_page__section5_photo_right img {
+        height: 50vh;
+    }
+
+    .main_page__section5_description h1 {
+        font-size: 16px;
+    }
+
+    .main_page__section5_description p {
+        font-size: 9px;
+    }
+
+    .main_page__section5_description button {
+        border-radius: 5px;
+        padding: 5px 10px;
+        font-size: 9px;
+    }
+    .main_page__section6 {
+        /* height: 50vh; */
+        margin-bottom: 0;
+        padding: 0 0 10px 0;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 767px) {}
+
+@media (min-width: 768px) and (max-width: 979px) {}
+
+@media (min-width: 1200px) {}

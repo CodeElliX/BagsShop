@@ -89,7 +89,7 @@ export default function Home() {
           </Link>
         </div>
         <div className={styles.main_page__stiker}>
-          <Image src={'./yellow_stiker.png'} alt="yellow_stiker" width={200} height={200} priority />
+          <Image src={'./yellow_stiker.png'} alt="yellow_stiker" className={styles.main_page__stiker} width={200} height={200} priority />
           <Link href="/backpacks">
             <Image src={'./backpack1.png'} alt="yellow_stiker" className={styles.main_page__stiker_bag} width={120} height={150} />
           </Link>
@@ -118,7 +118,7 @@ export default function Home() {
         </span>
       </section>
       <section className={styles.main_page__section5}>
-        <div className={styles.main_page__section5_photo}>
+        <div className={styles.main_page__section5_photo_left}>
           <Image src={'/woomen4.jpg'} alt="woomen4" className={styles.section5_photo1} width={200} height={250} priority />
           <Image src={'/woomen3.jpg'} alt="woomen3" className={styles.section5_photo2} width={200} height={250} priority />
           <Image src={'/men1.jpg'} alt="men1" className={styles.section5_photo3} width={300} height={250} priority />
@@ -137,7 +137,7 @@ export default function Home() {
             <button>Переглянути усі товари</button>
           </Link>
         </div>
-        <div className={styles.main_page__section5_photo}>
+        <div className={styles.main_page__section5_photo_right}>
           <Image src={'/woomen5.jpg'} alt="woomen_bag" className={styles.section5_photo5} width={200} height={250} priority />
         </div>
       </section>

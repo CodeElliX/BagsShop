@@ -3,7 +3,7 @@
     width: 97%;
     min-height: min-content;
     font-size: 70%;
-    padding: 40px 20px 40px 20px; 
+    padding: 40px 20px 40px 20px;
     background-image: url("/background.jpg");
 }
 
@@ -47,10 +47,7 @@
 
 .category__link:hover {
     cursor: pointer;
-    /* background: linear-gradient(#5CC1C1, #096c5d); */
     background-color: #EED3CE;
-    /* background: linear-gradient(.25turn, #A3D4D8, rgba(238, 201, 0, 0.4)); */
-
 }
 
 .category__link:active {
@@ -68,3 +65,13 @@
 .category__sections:last-child {
     margin-right: 40px;
 }
+
+@media (max-width: 480px) {
+
+}
+
+@media (max-width: 767px) {}
+
+@media (min-width: 768px) and (max-width: 979px) {}
+
+@media (min-width: 1200px) {}

@@ -105,3 +105,16 @@
 .button_go_back:hover svg path {
     stroke: #FFFFFF;
 }
+
+
+@media (max-width: 480px) {
+    .cart {
+  
+    }
+}
+
+@media (max-width: 767px) {}
+
+@media (min-width: 768px) and (max-width: 979px) {}
+
+@media (min-width: 1200px) {}

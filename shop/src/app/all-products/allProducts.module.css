@@ -5,23 +5,20 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    gap: 50px;
 }
 
 .aside {
-    margin-left: 20px;
+    flex: 0.5;
 }
 
 .all_products__content {
+    flex: 2;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    align-items: center;
     width: 80%;
-    gap: 20px;
+    height: fit-content;
+    gap: 10px;
     margin-bottom: 40px;
+    padding: 10px;
 }
-
-/* .all_products__content a {
-    text-decoration: none;
-    color: inherit;
-} */

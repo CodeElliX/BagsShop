@@ -31,14 +31,14 @@ const backpacks = useSelector(selectBackpackData);
   }, [])
     return (
         <div className={styles.all_product__wrap}>
-            <div className="aside">
+            <aside className={styles.aside}>
                 <Filters
                     from="all-products"
                     backpacksItems={itemsBackpacks}
                     bagsItems={itemsBags}
                     walletsItems={itemsWallets}
                 />
-            </div>
+            </aside>
 
             <div className={styles.all_products__content}>
 

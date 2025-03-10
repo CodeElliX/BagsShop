@@ -30,9 +30,9 @@ const Bags = () => {
     return (
         <>
             <div className={styles.bags__wrap}>
-                <div className={styles.bags__filters_section}>
+                <aside className={styles.aside}>
                     {pathname === "/bags/" && <Filters from="bags" bagsItems={items} />}
-                </div>
+                </aside>
                 <div className={styles.bags__section}>
                     {filters
                         .map((obj) => {

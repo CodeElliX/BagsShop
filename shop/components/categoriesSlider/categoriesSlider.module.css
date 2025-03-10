@@ -93,3 +93,34 @@
 .arrow_right:active {
     background-color: rgba(152, 128, 239, 0.5);
 }
+
+@media (max-width: 480px) {
+
+    .sliderWrapper {
+        height: 10vh;
+    }
+
+    .slide {
+        width: 125px;
+    }
+
+    .slide img {
+        width: 75px;
+        height: 75px;
+    }
+    
+.arrows {
+    height: max-content;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 57%;
+}
+
+.arrow_left,
+.arrow_right {
+    width: 40px;
+    height: 40px;
+}
+}

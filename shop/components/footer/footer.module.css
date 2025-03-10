@@ -67,3 +67,11 @@
 .footer_wrap div {
     box-sizing: border-box;
 }
+
+@media (max-width: 480px) { 
+    .footer__sections {
+        gap: 40px;
+        flex-wrap: wrap;
+        padding: 30px 10px;
+    }
+}

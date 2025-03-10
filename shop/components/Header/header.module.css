@@ -57,23 +57,38 @@
 }
 
 
- @media (max-width: 480px) {
- .header {
-  height: 30vh;
- }
-  }
- 
- /* От ландшафтного экрана телефона до потретного планшета */
- @media (max-width: 767px) { 
-
+@media (max-width: 480px) {
+  .header {
+    height: 30vh;
   }
 
- /* От портретного планшета до ландшафтного экрана и настольных дисплеев */
- @media (min-width: 768px) and (max-width: 979px) {
-
+  .header__lozung {
+    width: 70px;
+    height: 70px;
   }
 
- /* Большой дисплей */
- @media (min-width: 1200px) { 
-
+  .logo {
+    top: 30px;
+    left: 10px;
+    width: 20%;
+    height: 34%;
   }
+
+  .header__right_side {
+    display: flex;
+    align-items: center;
+    width: 55%;
+    top: 20px;
+    left: 40%;
+  }
+
+  .cart_button {
+    width: 50px;
+  }
+}
+
+@media (max-width: 767px) {}
+
+@media (min-width: 768px) and (max-width: 979px) {}
+
+@media (min-width: 1200px) {}

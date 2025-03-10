@@ -27,9 +27,9 @@ const Wallets = () => {
     return (
         <>
             <div className={styles.wallets__wrap}>
-                <div className={styles.wallets__filters_section}>
+                <aside className={styles.aside}>
                     {pathname === "/wallets/" && <Filters from="wallets" walletsItems={items} />}
-                </div>
+                </aside>
                 <div className={styles.wallets__section}>
                     {filters.map((obj) => {
                         return (

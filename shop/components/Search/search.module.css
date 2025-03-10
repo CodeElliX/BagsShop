@@ -1,15 +1,16 @@
 .root {
     position: relative;
-    /* left: -120px; */
 }
 
 .input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px solid rgba(0, 0, 0, 0.2);
-    padding: 12px 20px;
-    width: 200px;
+    padding: 12px 42px;
+    width: 80%;
     border-radius: 10px;
     font-size: 16px;
-    padding-left: 42px;
     transition: all;
 }
 
@@ -24,7 +25,7 @@
     opacity: 0.3;
     position: absolute;
     left: 14px;
-    top: 12px;
+    top: 13px;
 }
 
 .clearIcon {
@@ -32,11 +33,33 @@
     height: 18px;
     opacity: 0.3;
     position: absolute;
-    right: 15px;
-    top: 15px;
+    right: -14px;
+    top: 14px;
 
     &:hover {
         opacity: 0.8;
         cursor: pointer;
+    }
+}
+
+@media (max-width: 480px) {
+    .input {
+        padding: 6px 30px;
+        border-radius: 5px;
+        font-size: 10px;
+    }
+
+    .icon {
+        width: 14px;
+        height: 14px;
+        top: 5px;
+        left: 10px;
+    }
+
+    .clearIcon {
+        width: 14px;
+        height: 14px;
+        right: -30%;
+        top: 5px;
     }
 }

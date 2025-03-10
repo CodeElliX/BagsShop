@@ -28,9 +28,9 @@ const Backpacks = () => {
     return (
         <>
             <div className={styles.backpacks_wrap}>
-                <div>
+                <aside className={styles.aside}>
                     {pathname === "/backpacks/" && <Filters from="backpacks" backpacksItems={items} />}
-                </div>
+                </aside>
                 <div className={styles.backpacks__bags_section}>
                     {filters.map((obj) => {
                         return (

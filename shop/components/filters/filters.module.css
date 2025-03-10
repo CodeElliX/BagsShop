@@ -1,18 +1,17 @@
 .filter__wrap {
     display: flex;
     flex-direction: column;
-    min-width: 250px;
     border: 1px solid #B8DEE3;
     border-radius: 2px;
-    margin-left: 40px;
     margin-bottom: 40px;
     padding: 10px;
 }
 
 .products_groop {
+    width: 100%;
     display: flex;
     flex-direction: column;
-
+    gap: 10px;
 }
 
 .products_groop h4 {
@@ -23,6 +22,7 @@
 
 .products_groop span {
     display: flex;
+    align-items: center;
     gap: 10px;
     font-size: 16px;
     padding-left: 10px;
@@ -72,4 +72,33 @@
 .products_groop__gender svg:hover {
     transform: translateY(0.5px);
     cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    .products_groop {
+        gap: 3px;
+    }
+    .filter__wrap h4 {
+        font-size: 12px;
+        text-align: start;
+        margin-bottom: 0;
+        display: block;
+        width: max-content;
+    }
+    .products_groop__wrap_gender h4 {
+        text-align: center;
+        margin-bottom: 3px;
+    }
+    .products_groop span {
+        font-size: 10px;
+        padding-left: 0;
+        gap: 5px;
+    }
+    .filter__wrap svg{
+       width: 30px;
+       height: 30px;
+    }
+    .products_groop__gender {
+        gap: 10px;
+    }
 }

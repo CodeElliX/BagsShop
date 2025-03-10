@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Footer from '../../components/footer/page';
 import CategoriesSlider from '../../components/categoriesSlider/page'
+import Categories from '../../components/categories/page';
 
 export default function Home() {
 
@@ -12,6 +13,9 @@ export default function Home() {
         <Image src={'./logo_2.png'} alt="logo" className={styles.main_page__logo} width={260} height={220} priority />
         <Image src={'./lozung_2.png'} alt="lozung" className={styles.main_page__lozung} width={200} height={200} priority />
       </div>
+      <section>
+        <Categories />
+      </section>
       <section className={styles.main_page__section2}>
         <div className={styles.main_page__box}>
           <div className={styles.main_page__item}>
@@ -70,31 +74,31 @@ export default function Home() {
         </div>
       </section>
       <section className={styles.main_page__section3}>
-        <div className={styles.main_page__stiker}>
+        <div className={styles.main_page__stiker_pack}>
           <Image src={'./green_stiker.png'} alt="green_stiker" className={styles.main_page__stiker} width={200} height={200} />
           <Link href="/bags">
             <Image src={'./bag2.png'} alt="yellow_stiker" className={styles.main_page__stiker_bag} width={120} height={150} />
           </Link>
         </div>
-        <div className={styles.main_page__stiker}>
+        <div className={styles.main_page__stiker_pack}>
           <Image src={'./lilac_stiker.png'} alt="lilac_stiker" className={styles.main_page__stiker} width={200} height={200} />
           <Link href="/backpacks">
             <Image src={'./backpack2.png'} alt="yellow_stiker" className={styles.main_page__stiker_bag} width={120} height={150} />
           </Link>
         </div>
-        <div className={styles.main_page__stiker}>
+        <div className={styles.main_page__stiker_pack}>
           <Image src={'./pink_stiker.png'} alt="pink_stiker" className={styles.main_page__stiker} width={200} height={200} />
           <Link href="/bags">
             <Image src={'./bag1.png'} alt="yellow_stiker" className={styles.main_page__stiker_bag} width={120} height={150} />
           </Link>
         </div>
-        <div className={styles.main_page__stiker}>
+        <div className={styles.main_page__stiker_pack}>
           <Image src={'./yellow_stiker.png'} alt="yellow_stiker" className={styles.main_page__stiker} width={200} height={200} priority />
           <Link href="/backpacks">
             <Image src={'./backpack1.png'} alt="yellow_stiker" className={styles.main_page__stiker_bag} width={120} height={150} />
           </Link>
         </div>
-        <div className={styles.main_page__stiker}>
+        <div className={styles.main_page__stiker_pack}>
           <Image src={'./light_green_stiker.png'} alt="light_green" className={styles.main_page__stiker} width={200} height={200} />
           <Link href="/wallets">
             <Image src={'./wallet1.png'} alt="yellow_stiker" className={styles.main_page__stiker_bag} width={120} height={150} />
@@ -103,7 +107,7 @@ export default function Home() {
         <section className={styles.main_page__view}>
           <h4>Переглянути усі товари</h4>
           <Link href="/all-products">
-            <svg viewBox="0 0 512 512">
+            <svg viewBox="60 60 400 400">
               <title />
               <g>
                 <path d="M72.86,407.49H69.13a15,15,0,0,1-15-15V282.25C54.13,201.62,119.74,136,200.37,136h50.21V70.75a15,15,0,0,1,25-11.14L451.18,217.88a15,15,0,0,1,0,22.28L275.63,398.44a15,15,0,0,1-25-11.15V322H183.65a99.52,99.52,0,0,0-96.28,74.25A15,15,0,0,1,72.86,407.49ZM183.65,292h81.93a15,15,0,0,1,15,15v46.54L418.73,229,280.58,104.47V151a15,15,0,0,1-15,15H200.37A116.37,116.37,0,0,0,84.13,282.25v56.36A129.6,129.6,0,0,1,183.65,292Z" />

@@ -10,7 +10,7 @@ import { addItem } from '../redux/cartSlice'
 const ProductCard = (props) => {
 
     const [clikedSvg, setClickSvg] = useState(false);
-    const { id, name, art, price, image } = props;
+    const { id, name, art, price, image, availability } = props;
     const dispatch = useDispatch();
 
     const onClickEmptySvg = () => {
@@ -43,7 +43,9 @@ const ProductCard = (props) => {
                     <Link href={`/product-item?id=${props.id}&from=${props.from}`} className={styles.link}>
                         <h4>{props.name} {props.art}</h4>
                     </Link>
-                    <span><b>Ціна: </b>{props.price}грн</span>
+                    <span><b>{props.price}₴</b></span>
+                    {availability ? (<i>В наявності &#x2713;</i>) : (<i>Немає в наявності</i>)}
+
                     {!clikedSvg ?
                         <svg onClick={onClickEmptySvg} viewBox="0 0 24 24">
                             <title />

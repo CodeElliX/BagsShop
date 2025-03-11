@@ -8,6 +8,7 @@ import ProductCard from '../product-card/page';
 import { selectValue, resetFilters } from '../redux/filterSlice';
 import { usePathname } from 'next/navigation';
 import { preRenderFilters } from '../utils/preRenderFilters';
+import CatalogSettings from '../../../components/catalog-settings/page';
 
 const Wallets = () => {
 
@@ -30,6 +31,7 @@ const Wallets = () => {
                 <aside className={styles.aside}>
                     {pathname === "/wallets/" && <Filters from="wallets" walletsItems={items} />}
                 </aside>
+                <CatalogSettings itemsLength={items.length} />
                 <div className={styles.wallets__section}>
                     {filters.map((obj) => {
                         return (

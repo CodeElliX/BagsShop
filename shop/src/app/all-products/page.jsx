@@ -1,34 +1,36 @@
 "use client"
 import styles from './allProducts.module.css'
 import { useSelector, useDispatch } from 'react-redux';
-import {selectBackpackData, selectBagsData, selectWalletsData, fetchBackpacks, fetchBags, fetchWallets  } from '../redux/productsSlice';
+import { selectBackpackData, selectBagsData, selectWalletsData, fetchBackpacks, fetchBags, fetchWallets } from '../redux/productsSlice';
 import { selectValue, resetFilters } from "../redux/filterSlice";
 import { preRenderFiltersHomePage } from "../utils/preRenderFilters";
 import Filters from "../../../components/filters/page";
+import CatalogSettings from '../../../components/catalog-settings/page';
 import ProductCard from "../product-card/page";
 import { useEffect } from 'react';
 
 
 const AllProducts = () => {
-const backpacks = useSelector(selectBackpackData);
-  const bags = useSelector(selectBagsData);
-  const wallets = useSelector(selectWalletsData);
-  const dispatch = useDispatch()
+    const backpacks = useSelector(selectBackpackData);
+    const bags = useSelector(selectBagsData);
+    const wallets = useSelector(selectWalletsData);
+    const dispatch = useDispatch();
+    const itemsLength = backpacks.length + bags.length + wallets.length;
 
-  const searchValue = useSelector(selectValue);
-  const activeFilters = useSelector(state => state.filter);
+    const searchValue = useSelector(selectValue);
+    const activeFilters = useSelector(state => state.filter);
 
 
-  const itemsBackpacks = preRenderFiltersHomePage(searchValue, backpacks, activeFilters);
-  const itemsBags = preRenderFiltersHomePage(searchValue, bags, activeFilters);
-  const itemsWallets = preRenderFiltersHomePage(searchValue, wallets, activeFilters);
+    const itemsBackpacks = preRenderFiltersHomePage(searchValue, backpacks, activeFilters);
+    const itemsBags = preRenderFiltersHomePage(searchValue, bags, activeFilters);
+    const itemsWallets = preRenderFiltersHomePage(searchValue, wallets, activeFilters);
 
-  useEffect(() => {
-    dispatch(fetchBackpacks());
-    dispatch(fetchBags());
-    dispatch(fetchWallets());
-    dispatch(resetFilters());
-  }, [])
+    useEffect(() => {
+        dispatch(fetchBackpacks());
+        dispatch(fetchBags());
+        dispatch(fetchWallets());
+        dispatch(resetFilters());
+    }, [])
     return (
         <div className={styles.all_product__wrap}>
             <aside className={styles.aside}>
@@ -39,7 +41,7 @@ const backpacks = useSelector(selectBackpackData);
                     walletsItems={itemsWallets}
                 />
             </aside>
-
+            <CatalogSettings itemsLength={itemsLength} />
             <div className={styles.all_products__content}>
 
                 {itemsBackpacks.map((obj) => {

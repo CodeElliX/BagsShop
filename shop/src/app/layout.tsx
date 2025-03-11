@@ -40,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="uk">
       <body className={nunito.className}>
         <Provider store={store}>
           <LayoutContent>{children}</LayoutContent>

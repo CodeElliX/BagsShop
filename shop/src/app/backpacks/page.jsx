@@ -8,6 +8,8 @@ import { selectValue, resetFilters } from '../redux/filterSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { usePathname } from 'next/navigation';
 import { preRenderFilters } from '../utils/preRenderFilters';
+import CatalogSettings from '../../../components/catalog-settings/page';
+
 
 const Backpacks = () => {
 
@@ -31,6 +33,7 @@ const Backpacks = () => {
                 <aside className={styles.aside}>
                     {pathname === "/backpacks/" && <Filters from="backpacks" backpacksItems={items} />}
                 </aside>
+               <CatalogSettings itemsLength={items.length}/>
                 <div className={styles.backpacks__bags_section}>
                     {filters.map((obj) => {
                         return (

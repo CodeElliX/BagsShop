@@ -102,3 +102,32 @@
         gap: 10px;
     }
 }
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .products_groop {
+        gap: 3px;
+    }
+    .filter__wrap h4 {
+        font-size: 12px;
+        text-align: start;
+        margin-bottom: 0;
+        display: block;
+        width: max-content;
+    }
+    .products_groop__wrap_gender h4 {
+        text-align: center;
+        margin-bottom: 3px;
+    }
+    .products_groop span {
+        font-size: 10px;
+        padding-left: 0;
+        gap: 5px;
+    }
+    .filter__wrap svg{
+       width: 30px;
+       height: 30px;
+    }
+    .products_groop__gender {
+        gap: 10px;
+    }
+}

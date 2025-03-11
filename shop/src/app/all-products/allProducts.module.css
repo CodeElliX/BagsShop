@@ -1,6 +1,9 @@
 .all_product__wrap {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
+    flex-wrap: wrap;
     background-image: url("/background.jpg");
     background-size: cover;
     background-position: center;
@@ -8,7 +11,7 @@
 }
 
 .aside {
-    flex: 0.5;
+    display: none;
 }
 
 .all_products__content {
@@ -16,9 +19,15 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 80%;
+    width: 97%;
     height: fit-content;
     gap: 10px;
     margin-bottom: 40px;
     padding: 10px;
+}
+
+@media (max-width: 767px) {
+    .all_products__content {
+        gap: 4px;
+    }
 }

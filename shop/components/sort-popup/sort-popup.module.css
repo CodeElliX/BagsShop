@@ -1,0 +1,26 @@
+.sort__wrap {
+    display: flex;
+    flex-direction: column;
+    background-color: azure;
+    font-size: 100%;
+    border: 2px solid blue;
+    border-radius: 6px;
+    width: 200px;
+    padding: 10px 10px;
+}
+
+.sort__label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sort__label svg {
+    width: 20px;
+    height: 20px;
+    opacity: 0.8;
+}
+
+.sort__popup ul li {
+    list-style: none;
+}

@@ -1,14 +1,12 @@
 .bags__card {
   width: 211px;
-  max-width: 210px;
-  height: 35%;
-  max-height: 350px;
-  font-size: 16px;
+  height: 100%;
+  min-height: 320px;
   border-radius: 20px;
   border: 1px solid rgba(127, 255, 212, 0.2);
   overflow: hidden;
   background-color: #FFFFFF;
-  flex-wrap: wrap;
+  box-sizing: border-box;
 
   &:hover {
     box-shadow: 0px 10px 34px 5px rgba(225, 223, 223, 0.75);
@@ -27,13 +25,17 @@
   opacity: 0.9;
   overflow: hidden;
   hyphens: auto;
-  height: 3.8cap;
+  height: 10%;
+  min-height: 50px;
   padding-bottom: 2%;
   margin-bottom: 0;
+  font-size: 16px;
 }
 
 .bags_card__bottom i {
   color: #008000;
+  font-size: 14px;
+  margin-bottom: 5px;
 }
 
 .bags__card svg {
@@ -67,18 +69,24 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  width: 90%;
-  height: 120px;
+  width: 100%;
   position: relative;
+  min-height: 120px;
+}
+
+.bags_card__bottom span {
+  font-size: 20px;
+  color: #3E77AA;
 }
 
 
 @media (max-width: 456px) {
   .bags__card {
     width: 48%;
-    min-height: 50vh;
+    min-width: 48%;
     border-radius: 0;
-    font-size: 40%;
+    font-size: 30%;
+    min-height: 50vh;
   }
 
   .link img {
@@ -89,26 +97,28 @@
   }
 
   .card h4 {
-    padding-bottom: 4vh;
-    font-size: clamp(5vw, 3vw, 3vw);
+    font-size: clamp(3vw, 3vw, 3vw);
+    margin: 1vh 2px;
   }
 
   .bags__card svg {
-    width: 3vh;
-    height: 3vh;
-    bottom: -15vh;
+    bottom: 1vh;
   }
 
   .bags_card__bottom {
     margin: 0 auto;
+    height: 100%;
+    box-sizing: border-box;
   }
 
   .bags_card__bottom span {
-    font-size: clamp(5vw, 4vw, 4vw);
+    font-size: clamp(2vw, 4vw, 4vw);
+
   }
 
   .bags_card__bottom i {
-    font-size: clamp(5vw, 4vw, 4vw);
+    margin-top: 1vh;
+    font-size: 1vh;
   }
 
 }
@@ -116,7 +126,6 @@
 @media (min-width: 457px) and (max-width: 1023px) {
   .bags__card {
     min-height: 50vh;
-    /* min-width: 32%; */
     min-width: 49%;
     border-radius: 0;
     font-size: 60%;
@@ -124,39 +133,36 @@
 
   .link img {
     width: 25vw;
-    /* aspect-ratio: 1 / 2;
-    object-fit: contain; */
     height: 25vh;
     background-color: #FFFFFF;
-
     min-width: 100%;
     min-height: 100%;
-
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
   }
 
   .card h4 {
-    padding-bottom: 4vh;
     font-size: clamp(3vw, 3vw, 3vw);
+    min-height: 75px;
   }
 
   .bags__card svg {
-    width: 3vh;
-    height: 3vh;
-    bottom: -10vh;
+    bottom: 0;
   }
 
   .bags_card__bottom i {
-    font-size: clamp(2vw, 2vw, 2vw);
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    font-size: 2vh;
   }
 
   .bags_card__bottom {
     margin: 0 auto;
+    min-height: 4vh;
   }
 
   .bags_card__bottom span {
-    font-size: clamp(2vw, 4vw, 4vw);
+    font-size: clamp(4vw, 2vw, 2vw);
   }
 }

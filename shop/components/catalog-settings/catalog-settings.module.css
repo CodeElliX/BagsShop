@@ -2,7 +2,6 @@
     width: 97%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     position: relative;
     font-size: 18px;
     min-height: 50px;
@@ -11,6 +10,7 @@
 .settings__filter_btn {
     display: flex;
     gap: 6%;
+    margin-left: 2%;
 }
 
 .settings__filter_btn span {
@@ -20,12 +20,15 @@
 }
 
 .settings__sort_popup {
-    margin-right: 2%;
+    bottom: 0;
+    top: 0;
+    right: 2%;
+    position: absolute;
 }
 
-
-.settings__wrap button {
+.settings__filter_btn button {
     display: flex;
+    align-self: center;
     align-items: center;
     gap: 8px;
     margin-left: 2%;
@@ -37,39 +40,41 @@
     font-size: 16px;
 }
 
-.settings__wrap button svg {
+.settings__filter_btn button svg {
     width: 20px;
     height: 20px;
 }
 
 
 @media (max-width: 301px) {
-    .settings__wrap button {
+
+    .settings__filter_btn button {
         padding: 0 20px;
         border-radius: 4px;
         font-size: 12px;
     }
 
-    .settings__wrap button p {
+    .settings__filter_btn button p {
         margin: 0;
         padding: 4%;
     }
 }
 
 @media (min-width: 301px) and (max-width: 622px) {
-    .settings__wrap button {
-        padding: 0 20px;
+
+    .settings__filter_btn button {
+        padding: 5px 20px;
         border-radius: 4px;
         font-size: 16px;
+        gap: 5px;
     }
 
-    .settings__wrap button p {
-        margin: 8%;
+    .settings__filter_btn button p {
+        margin: 0;
     }
 
-    .settings__wrap button svg {
+    .settings__filter_btn button svg {
         width: 30px;
-        height: 30px;
     }
 
     .settings__sort_popup {
@@ -77,7 +82,7 @@
     }
 }
 
-@media (max-width: 623px) {
+@media (max-width: 642px) {
     .count {
         display: none;
     }

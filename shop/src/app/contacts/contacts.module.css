@@ -1,5 +1,6 @@
 .contacts__wrap {
     display: flex;
+    align-items: center;
     gap: 40px;
     text-align: center;
 }
@@ -19,4 +20,31 @@
 
 .contacts__wrap p {
     font-size: 22px;
+}
+
+.contacts__map iframe {
+    width: 50vw;
+    height: 50vh;
+    border: 1px solid;
+}
+
+@media (max-width: 1100px) {
+
+    .contacts__wrap {
+        flex-direction: column;
+    }
+
+    .contacts__map iframe {
+        width: 80vw;
+        height: 30vh;
+    }
+
+    .contacts__wrap h1 {
+        font-size: 90%;
+    }
+
+    .contacts__wrap p {
+        font-size: 60%;
+    }
+
 }

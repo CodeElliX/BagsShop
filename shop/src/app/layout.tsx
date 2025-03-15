@@ -12,6 +12,7 @@ import { useEffect } from "react";
 import { getCartFromLS } from './utils/getCartFromLS'
 import { setCart } from "./redux/cartSlice";
 
+
 const nunito = Nunito({ subsets: ['latin'] })
 
 function LayoutContent({ children }: { children: React.ReactNode }) {
@@ -41,6 +42,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="uk">
+      <head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+        />
+      </head>
       <body className={nunito.className}>
         <Provider store={store}>
           <LayoutContent>{children}</LayoutContent>

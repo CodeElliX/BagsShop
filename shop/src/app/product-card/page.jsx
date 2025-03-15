@@ -34,13 +34,14 @@ const ProductCard = (props) => {
                         src={Array.isArray(props.image) && props.image.length > 0 ? String(props.image[0]) : "/bag2.webp"}
                         alt="icon"
                         className={styles.product}
-                        width={200}
-                        height={200}
+                        // width={200}
+                        // height={200}
+                        fill
                         priority
                     />
                 </Link>
                 <div className={styles.bags_card__bottom}>
-                    <Link href={`/product-item?id=${props.id}&from=${props.from}`} className={styles.link}>
+                    <Link href={`/product-item?id=${props.id}&from=${props.from}`} className={styles.head}>
                         <h4>{props.name} {props.art}</h4>
                     </Link>
                     <span><b>{props.price}₴</b></span>

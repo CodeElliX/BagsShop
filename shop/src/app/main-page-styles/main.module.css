@@ -226,10 +226,11 @@
 .main_page__section5_description button {
     background-color: #BBAFE8;
     color: white;
+    outline: 4px solid white;
+    border: none;
     font-weight: bold;
     text-shadow: 1px;
     border-radius: 10px;
-    border: none;
     padding: 10px 20px;
     font-size: 18px;
     transition: transform 300ms ease-in-out;

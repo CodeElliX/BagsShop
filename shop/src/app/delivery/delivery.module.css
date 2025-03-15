@@ -14,15 +14,14 @@ text-decoration-color: #9DD0D4;
 }
 
 .delivery__wrap h2{
-font-size: 28px;
+font-size: 32px;
 opacity: 0.7;
+text-align: center;
 }
 
 .delivery__wrap h3{
-font-size: 30px;
-margin: 40px auto;
+font-size: 28px;
 opacity: 0.7;
-text-align: center;
 border: 1px solid #9DD0D4;
 width: fit-content;
 }
@@ -30,4 +29,26 @@ width: fit-content;
 .delivery__wrap ul,
 .delivery__wrap p{
 font-size: 22px;
+}
+
+
+@media (max-width: 1100px) {
+
+    .delivery__wrap h1 {
+        font-size: 90%;
+    }
+
+    .delivery__wrap h2 {
+        font-size: 70%;
+    }
+
+    .delivery__wrap h3 {
+        font-size: 60%;
+    }
+
+    .delivery__wrap p,
+    .delivery__wrap ul {
+        font-size: 50%;
+    }
+
 }

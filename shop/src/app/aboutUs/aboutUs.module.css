@@ -33,3 +33,25 @@
 .about__wrap ul li::marker {
     color: #A3D2D8;
 }
+
+
+@media (max-width: 1100px) {
+
+    .about__wrap h1 {
+        font-size: 90%;
+    }
+
+    .about__wrap h3 {
+        font-size: 70%;
+    }
+
+    .about__wrap h4 {
+        font-size: 60%;
+    }
+
+    .about__wrap p,
+    .about__wrap ul {
+        font-size: 50%;
+    }
+
+}

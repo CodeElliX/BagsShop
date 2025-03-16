@@ -34,9 +34,8 @@ const ProductCard = (props) => {
                         src={Array.isArray(props.image) && props.image.length > 0 ? String(props.image[0]) : "/bag2.webp"}
                         alt="icon"
                         className={styles.product}
-                        // width={200}
-                        // height={200}
-                        fill
+                        width={200}
+                        height={200}
                         priority
                     />
                 </Link>

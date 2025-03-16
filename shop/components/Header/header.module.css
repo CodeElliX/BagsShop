@@ -58,6 +58,8 @@
 
 @media (max-width: 480px) {
   .header {
+    justify-content: center;
+    align-items: center;
     height: 8vh;
     background-image: none;
     background-color: #221F1F;
@@ -73,11 +75,22 @@
 
   .header__right_side {
     text-align: center;
-    border: 1px solid white;
+    align-items: center;
+    width: 90%;
+    justify-content: space-between;
+    margin-right: 0;
+    margin-top: 0;
+  }
+
+  .search {
+    width: 40%;
   }
 
   .cart_button {
-    height: fit-content;
+    height: 10vh;
+    min-height: 35px;
+    width: 10vw;
+    min-width: 35px;
     margin-left: 30%;
   }
 

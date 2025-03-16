@@ -1,64 +1,3 @@
-// import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-// import { RootState } from './store';
-
-// export enum SortPropertyEnum {
-//   RATING_DESC = 'rating',
-//   RATING_ASC = '-rating',
-//   TITLE_DESC = 'title',
-//   TITLE_ASC = '-title',
-//   PRICE_DESC = 'price',
-//   PRICE_ASC = '-price'
-// }
-
-// export type Sort = {
-//   name: string,
-//   sortProperty: SortPropertyEnum
-// }
-
-// const initialState = {
-//   searchValue: '',
-//   category: [],
-//   series: [],
-//   classification: [],
-//   structures: [],
-//   compartments: [],
-//   colours: [],
-//   gender: [],
-//   chapter: [],
-//   sort: {
-//     name: 'популярности',
-//     sortProperty: SortPropertyEnum.RATING_DESC
-//   }
-// }
-
-// export const filterSlice = createSlice({
-//   name: 'filter',
-//   initialState,
-//   reducers: {
-//     setSearchValue(state, actions) {
-//       state.searchValue = actions.payload
-//     },
-//     setSort(state, actions: PayloadAction<Sort>) {
-//       state.sort = actions.payload
-//     },
-//     toggleFilter(state, action) {
-//       const { filterType, value } = action.payload;
-//       if (state[filterType].includes(value)) {
-//         state[filterType] = state[filterType].filter(item => item !== value);
-//       } else {
-//         state[filterType] = [...state[filterType], value];
-//       }
-//     },
-//     resetFilters: () => initialState,
-//   }
-// })
-
-// export const { setSearchValue, setSort, toggleFilter, resetFilters } = filterSlice.actions;
-
-// export default filterSlice.reducer;
-
-// export const selectValue = (state: RootState) => state.filter?.searchValue || "";
-// export const selectSort = (state: RootState) => state.filter.sort;
 
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "./store";
@@ -88,6 +27,8 @@ export interface FilterState {
   gender: string[];
   chapter: string[];
   sort: Sort;
+  visible: boolean,
+  // filterOpen: boolean
 }
 
 const initialState: FilterState = {
@@ -104,6 +45,8 @@ const initialState: FilterState = {
     name: "популярності",
     sortProperty: SortPropertyEnum.RATING_DESC,
   },
+  visible: false,
+  // filterOpen: false
 };
 
 export const filterSlice = createSlice({
@@ -123,7 +66,7 @@ export const filterSlice = createSlice({
       action: PayloadAction<{ filterType: keyof Omit<FilterState, "searchValue" | "sort">; value: string }>
     ) {
       const { filterType, value } = action.payload;
-      const array = state[filterType] as string[]; // Явное указание, что это массив строк
+      const array = state[filterType] as string[];
 
       if (array.includes(value)) {
         state[filterType] = array.filter(item => item !== value) as never;
@@ -133,10 +76,18 @@ export const filterSlice = createSlice({
     },
 
     resetFilters: () => initialState,
+
+    setVisible(state, action: PayloadAction<boolean>) {
+      state.visible = action.payload;
+    },
+
+    // setFilterOpen(state, action: PayloadAction<boolean>) {
+    //   state.filterOpen = action.payload;
+    // }
   },
 });
 
-export const { setSearchValue, setSort, toggleFilter, resetFilters } = filterSlice.actions;
+export const { setSearchValue, setSort, toggleFilter, resetFilters, setVisible } = filterSlice.actions;
 
 export default filterSlice.reducer;
 

@@ -26,6 +26,30 @@
     padding: 10px;
 }
 
+.back_to_main {
+    align-self: first baseline;
+    margin: 1.5%;
+
+}
+
+.back_to_main a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.6;
+    font-size: 16px;
+    gap: 5px;
+}
+
+.back_to_main h4 {
+    margin: 0;
+}
+
+.back_to_main svg {
+    width: 20px;
+    height: 20px;
+}
+
 @media (min-width: 480px) and (max-width: 767px) {
     .wallets__section {
         gap: 4px;

@@ -10,8 +10,8 @@ export default function Home() {
   return (
     <div className={styles.main_page}>
       <div className={styles.main_page__head}>
-        <Image src={'./logo_2.png'} alt="logo" className={styles.main_page__logo} width={260} height={220} priority />
-        <Image src={'./lozung_2.png'} alt="lozung" className={styles.main_page__lozung} width={200} height={200} priority />
+        <Image src={'./logo_2.png'} alt="logo" className={styles.main_page__logo} width={260} height={220} />
+        <Image src={'./lozung_2.png'} alt="lozung" className={styles.main_page__lozung} width={200} height={200} />
       </div>
       <section>
         <Categories />

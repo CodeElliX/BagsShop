@@ -1,21 +1,21 @@
 .backpacks_wrap {
+    position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     width: 100%;
-    flex-wrap: wrap;
     background-image: url("/background.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.aside {
-    display: none;
+.main {
+    width: 100%;
+    flex-wrap: wrap;
 }
 
 .backpacks__bags_section {
-    flex: 2;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -24,6 +24,29 @@
     gap: 10px;
     margin-bottom: 40px;
     padding: 10px;
+}
+
+.back_to_main {
+    width: max-content;
+    margin: 1.5%;
+}
+
+.back_to_main a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.6;
+    font-size: 16px;
+    gap: 5px;
+}
+
+.back_to_main h4 {
+    margin: 0;
+}
+
+.back_to_main svg {
+    width: 20px;
+    height: 20px;
 }
 
 @media (max-width: 767px) {

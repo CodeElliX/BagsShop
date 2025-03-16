@@ -1,23 +1,61 @@
 .filter__wrap {
+    position: absolute;
+    background-color: aliceblue;
     display: flex;
     flex-direction: column;
-    border: 1px solid #B8DEE3;
-    border-radius: 2px;
-    margin-bottom: 40px;
-    padding: 10px;
+    border-radius: 10px;
+    padding: 10px 10px 25px 20px;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    top: -2%;
+    min-width: 24vw;
+    max-height: 120vh;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-100%);
+}
+
+.hidden,
+.open {
+    transition: all 0.3s ease-in-out;
+}
+
+.filter__wrap.hidden {
+    transform: translateX(-100%);
+}
+
+.filter__wrap.open {
+    transform: translateX(0);
+}
+
+.clouse {
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    font-size: 22px;
+}
+
+.clouse svg {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.clouse h4 {
+    cursor: pointer;
 }
 
 .products_groop {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
 }
 
 .products_groop h4 {
     text-align: center;
     margin-bottom: 10px;
-    font-size: 22px;
+    font-size: 20px;
+    margin-bottom: 0;
 }
 
 .products_groop span {
@@ -42,7 +80,7 @@
 }
 
 .selected {
-    outline: 2px solid black; 
+    outline: 2px solid black;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -50,10 +88,14 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    font-size: 22px;
+    font-size: 20px;
     box-sizing: border-box;
-
 }
+
+.products_groop__wrap_gender h4 {
+    margin: 10px;
+}
+
 .products_groop__gender {
     display: flex;
     align-items: center;
@@ -78,6 +120,7 @@
     .products_groop {
         gap: 3px;
     }
+
     .filter__wrap h4 {
         font-size: 12px;
         text-align: start;
@@ -85,19 +128,23 @@
         display: block;
         width: max-content;
     }
+
     .products_groop__wrap_gender h4 {
         text-align: center;
         margin-bottom: 3px;
     }
+
     .products_groop span {
         font-size: 10px;
         padding-left: 0;
         gap: 5px;
     }
-    .filter__wrap svg{
-       width: 30px;
-       height: 30px;
+
+    .filter__wrap svg {
+        width: 30px;
+        height: 30px;
     }
+
     .products_groop__gender {
         gap: 10px;
     }
@@ -107,6 +154,7 @@
     .products_groop {
         gap: 3px;
     }
+
     .filter__wrap h4 {
         font-size: 12px;
         text-align: start;
@@ -114,19 +162,23 @@
         display: block;
         width: max-content;
     }
+
     .products_groop__wrap_gender h4 {
         text-align: center;
         margin-bottom: 3px;
     }
+
     .products_groop span {
         font-size: 10px;
         padding-left: 0;
         gap: 5px;
     }
-    .filter__wrap svg{
-       width: 30px;
-       height: 30px;
+
+    .filter__wrap svg {
+        width: 30px;
+        height: 30px;
     }
+
     .products_groop__gender {
         gap: 10px;
     }

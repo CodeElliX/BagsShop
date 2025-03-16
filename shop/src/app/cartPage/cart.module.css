@@ -107,9 +107,49 @@
 }
 
 
-@media (max-width: 480px) {
+@media (max-width: 925px) {
     .cart {
-  
+        width: 90%;
+    }
+
+    .cart__content_items {
+        width: 100%;
+    }
+
+    .content__tittle {
+        font-size: 16px;
+    }
+
+    .content__tittle svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .cart__clear {
+        font-size: 12px;
+    }
+
+    .cart__clear svg {
+        width: 10px;
+        height: 10px;
+    }
+
+    .cart__bottom {
+        font-size: 12px;
+    }
+
+    .button_go_back,
+    .button_pay_btn {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .button_go_back {
+        gap: 10px;
+    }
+
+    .cart__bottom_buttons {
+        width: 100%;
     }
 }
 

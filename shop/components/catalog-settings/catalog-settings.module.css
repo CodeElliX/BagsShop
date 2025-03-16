@@ -7,6 +7,10 @@
     min-height: 50px;
 }
 
+.open {
+    transform: translateX(-100%);
+}
+
 .settings__filter_btn {
     display: flex;
     gap: 6%;
@@ -38,6 +42,11 @@
     color: white;
     border-radius: 6px;
     font-size: 16px;
+    cursor: pointer;
+}
+
+.settings__filter_btn button:active {
+    transform: translateY(0.5px);
 }
 
 .settings__filter_btn button svg {

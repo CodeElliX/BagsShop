@@ -13,10 +13,12 @@ const Header = () => {
   return (
     <div className={styles.header}>
       <Link href="/">
-        <Image src={logo} alt="logo" className={styles.logo} priority />
+        <Image src={logo} alt="logo" className={styles.logo} />
       </Link>
       <div className={styles.header__right_side}>
-        <Search />
+        <div className={styles.search}>
+          <Search />
+        </div>
         <button className={styles.cart_button}>
           <Link href="/cartPage">
             <svg viewBox="0 0 256 256">

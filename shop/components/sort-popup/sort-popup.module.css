@@ -8,6 +8,13 @@
     border-radius: 6px;
     width: 20vw;
     padding: 10px 10px;
+    z-index: 10;
+    position: relative;
+    cursor: pointer;
+}
+
+.sort__wrap:active .sort__label svg{
+  transform: translateY(1px);
 }
 
 .sort__label {

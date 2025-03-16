@@ -1,10 +1,21 @@
 import { SortPopup } from '../sort-popup/page';
 import styles from './catalog-settings.module.css';
+import { setVisible, setFilterOpen } from '../../src/app/redux/filterSlice';
+import { useDispatch } from 'react-redux';
+
+
 const CatalogSettings = ({ itemsLength }) => {
+
+    const dispatch = useDispatch();
+
+    const onClickFilters = () => {
+        dispatch(setVisible(true))
+    }
+
     return (
         <div className={styles.settings__wrap}>
             <div className={styles.settings__filter_btn}>
-                <button>
+                <button onClick={onClickFilters}>
                     <svg viewBox="0 0 24 24">
                         <g>
                             <path d="M0 0h24v24H0z" fill="none" />

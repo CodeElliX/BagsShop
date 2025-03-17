@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+import { RootState } from "./store";
 
 export const fetchBackpacks = createAsyncThunk("backpack/fetchBackpacksStatus", async () => {
     const { data } = await axios.get("/backpackData.json")
@@ -16,7 +17,13 @@ export const fetchWallets = createAsyncThunk("wallet/fetchWalletsStatus", async 
     return data;
 })
 
-const initialState = {
+export interface BackpacksState {
+    backpacksItems: [],
+    bagsItems: [],
+    walletsItems: []
+}
+
+const initialState: BackpacksState = {
     backpacksItems: [],
     bagsItems: [],
     walletsItems: []
@@ -59,8 +66,8 @@ const backpacksSlice = createSlice({
     }
 })
 
-export const selectBackpackData = (state) => state.backpack.backpacksItems || [];
-export const selectBagsData = (state) => state.backpack.bagsItems || [];
-export const selectWalletsData = (state) => state.backpack.walletsItems || [];
+export const selectBackpackData = (state: RootState) => state.backpack.backpacksItems || [];
+export const selectBagsData = (state: RootState) => state.backpack.bagsItems || [];
+export const selectWalletsData = (state: RootState) => state.backpack.walletsItems || [];
 
 export default backpacksSlice.reducer;

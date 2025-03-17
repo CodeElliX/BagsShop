@@ -2,7 +2,7 @@
 import { usePathname } from 'next/navigation';
 import styles from './filters.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleFilter, setFilterOpen, setVisible, resetFilters } from '../../src/app/redux/filterSlice';
+import { toggleFilter, setVisible, resetFilters } from '../../src/app/redux/filterSlice';
 
 const Filters = (props) => {
     const path = usePathname();

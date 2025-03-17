@@ -35,8 +35,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/app/cartPage/page.jsx",
-    "src/app/page.jsx"
-  ],
+    "src/app/page.tsx"
+, "components/filters/page.jsx", "components/ProductItem/ProductItem.jsx"  ],
   "exclude": [
     "node_modules"
   ]

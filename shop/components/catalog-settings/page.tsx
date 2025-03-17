@@ -1,10 +1,13 @@
 import { SortPopup } from '../sort-popup/page';
 import styles from './catalog-settings.module.css';
-import { setVisible, setFilterOpen } from '../../src/app/redux/filterSlice';
+import { setVisible } from '../../src/app/redux/filterSlice';
 import { useDispatch } from 'react-redux';
 
+interface CatalogSettingsProps {
+    itemsLength: number
+}
 
-const CatalogSettings = ({ itemsLength }) => {
+const CatalogSettings = ({ itemsLength }: CatalogSettingsProps) => {
 
     const dispatch = useDispatch();
 

@@ -1,4 +1,5 @@
 import styles from './conditions.module.css'
+
 const Conditions = () => {
     return (
         <div className={styles.conditions__wrap}>

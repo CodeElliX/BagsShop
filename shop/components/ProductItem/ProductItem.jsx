@@ -15,7 +15,6 @@ const ProductItem = () => {
     const dispatch = useDispatch();
     const [btnProduct, setBtnProduct] = useState(false);
 
-
     const setClickButton = () => {
         setBtnProduct(!btnProduct);
         if (product) {

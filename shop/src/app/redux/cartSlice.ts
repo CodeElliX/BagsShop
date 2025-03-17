@@ -3,7 +3,20 @@ import { createSlice } from "@reduxjs/toolkit";
 import { calcTotalPrice } from '../utils/calcTotalPrice';
 import { calcTotalCount } from '../utils/calcTotalCount';
 
-const initialState = {
+export type CartItem = {
+  id: number,
+  art: number
+  count: number
+  price: number
+}
+
+export interface CartState {
+  items: CartItem[],
+  totalPrice: number,
+  totalCount: number
+}
+
+const initialState: CartState = {
   items: [],
   totalPrice: 0,
   totalCount: 0

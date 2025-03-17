@@ -14,10 +14,10 @@ const images = [
 ];
 
 const CategoriesSlider = () => {
-    const sliderRef = useRef(null);
-    const slideRef = useRef(null);
-    const [index, setIndex] = useState(0); // Начинаем с 0, чтобы избежать автоматического сдвига
-    const [cardWidth, setCardWidth] = useState(null);
+    const sliderRef = useRef<HTMLDivElement | null>(null);
+    const slideRef = useRef<HTMLDivElement | null>(null);
+    const [index, setIndex] = useState(0);
+    const [cardWidth, setCardWidth] = useState<number | null>(null);
 
     useLayoutEffect(() => {
         if (slideRef.current) {
@@ -30,11 +30,9 @@ const CategoriesSlider = () => {
     useLayoutEffect(() => {
         if (!sliderRef.current || cardWidth === null) return;
 
-        // Первое обновление делаем без анимации
         sliderRef.current.style.transition = "none";
         sliderRef.current.style.transform = `translateX(-${images.length * cardWidth}px)`;
 
-        // Потом включаем плавную анимацию
         setTimeout(() => {
             if (sliderRef.current) {
                 sliderRef.current.style.transition = "transform 0.5s ease-in-out";
@@ -43,21 +41,23 @@ const CategoriesSlider = () => {
         }, 50);
     }, [cardWidth]);
 
-    const moveSlider = (direction) => {
+    const moveSlider = (direction: string) => {
         if (cardWidth === null) return;
 
         let newIndex = direction === "next" ? index + 1 : index - 1;
 
-        sliderRef.current.style.transition = "transform 0.5s ease-in-out";
-        sliderRef.current.style.transform = `translateX(-${newIndex * cardWidth}px)`;
+        if (sliderRef.current) {
+            sliderRef.current.style.transition = "transform 0.5s ease-in-out";
+            sliderRef.current.style.transform = `translateX(-${newIndex * cardWidth}px)`;
+        }
 
         setTimeout(() => {
             const totalCards = images.length * 3;
-            if (newIndex >= totalCards - images.length) {
+            if (sliderRef.current && (newIndex >= totalCards - images.length)) {
                 sliderRef.current.style.transition = "none";
                 newIndex = images.length;
                 sliderRef.current.style.transform = `translateX(-${newIndex * cardWidth}px)`;
-            } else if (newIndex < images.length) {
+            } else if (sliderRef.current && (newIndex < images.length)) {
                 sliderRef.current.style.transition = "none";
                 newIndex = totalCards - images.length * 2;
                 sliderRef.current.style.transform = `translateX(-${newIndex * cardWidth}px)`;

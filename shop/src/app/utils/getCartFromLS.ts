@@ -11,7 +11,7 @@ export const getCartFromLS = () => {
                 totalCount: 0,
             };
         }
-
+        
         const data = localStorage.getItem('cart');
         const items = data ? JSON.parse(data) : [];
 

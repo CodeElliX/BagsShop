@@ -1,5 +1,7 @@
 import styles from './guarantee.module.css'
+
 const Guarantee = () => {
+
     return (
         <div className={styles.guarantee__wrap}>
             <h1>Гарантія</h1>

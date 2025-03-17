@@ -1,6 +1,7 @@
 import styles from './return.module.css';
 
 const ReturnProducts = () => {
+
     return (
         <div className={styles.return__wrap}>
             <h1>Повернення товару</h1>
@@ -30,7 +31,6 @@ const ReturnProducts = () => {
             </ul>
             <h4>Якщо у вас залишилися питання – ми завжди раді допомогти! 💬</h4>
             <h4>З любов’ю, Bags Shop 💼🎒👜</h4>
-
         </div>
     )
 }

@@ -48,7 +48,7 @@ const CartItem: React.FC<CartItemProps> = ({ id, name, art, price, image, count 
         <b>{count}</b>
 
         <button onClick={onClickPlus} className={styles.cart_item__count_plus}>
-          <svg width="42" height="42" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+          <svg width="42" height="42" viewBox="0 0 256 256">
             <circle cx="128" cy="128" fill="transparent" r="96" stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="8" />
             <line fill="none" stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="8" x1="88" x2="168" y1="128" y2="128" />
             <line fill="none" stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="8" x1="128" x2="128" y1="88" y2="168" />
@@ -60,7 +60,7 @@ const CartItem: React.FC<CartItemProps> = ({ id, name, art, price, image, count 
       </div>
       <div className={styles.cart_item__remove}>
         <div onClick={onClickRemove} className={styles.cart_item__remove_item}>
-          <svg width="42" height="42" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+          <svg width="42" height="42" viewBox="0 0 256 256">
             <circle cx="128" cy="128" fill="transparent" r="96" stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="8" />
             <line fill="none" stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="8" x1="88" x2="168" y1="128" y2="128" />
             <line fill="none" stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="8" x1="128" x2="128" y1="88" y2="168" />

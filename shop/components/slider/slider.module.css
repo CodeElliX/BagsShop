@@ -107,7 +107,6 @@
 }
 
 
-
 .mainImageContainer {
     display: flex;
     align-items: center;
@@ -153,4 +152,35 @@
 .mainImageContainer .arrow_left:active,
 .mainImageContainer .arrow_right:active {
     background-color: rgba(152, 128, 239, 0.5);
+}
+
+@media (max-width: 800px) {
+
+    .wrap {
+        min-width: 80vw;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .slider__main_img {
+        max-width: 100%;
+        object-fit: contain;
+    }
+
+    .arrow_left {
+        left: -5%;
+    }
+
+    .arrow_right {
+        right: -5%;
+    }
+
+    .mainImageContainer .arrow_left:hover,
+    .mainImageContainer .arrow_right:hover {
+        background-color: inherit;
+    }
+
+    .sliderContainer {
+        display: none;
+    }
 }

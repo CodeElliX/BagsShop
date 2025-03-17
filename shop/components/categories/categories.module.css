@@ -17,6 +17,10 @@
     margin-top: 0;
 }
 
+.category__link.active {
+    background-color: #3E77AA;
+}
+
 .category__sections li {
     display: flex;
     flex: 1;
@@ -51,21 +55,9 @@
     margin: 0;
 }
 
-.category__link:hover h4 {
-    color: white;
-}
-
 .category__link:hover {
     cursor: pointer;
     background-color: #3E77AA;
-}
-
-.category__link:focus {
-    background-color: #3E77AA;
-}
-
-.category__link:focus h4 {
-    color: white;
 }
 
 .categories__icon {

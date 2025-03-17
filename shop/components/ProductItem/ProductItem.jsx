@@ -60,7 +60,7 @@ const ProductItem = () => {
 
     if (!product) return <div>Загрузка...</div>;
 
-    const { name, art, category, structure, compartments, availability, price, material, image } = product;
+    const { name, art, category, structures, compartments, availability, price, material, image } = product;
     const available = availability ? "В наявності" : "Немає в наявності";
 
     return (
@@ -83,7 +83,7 @@ const ProductItem = () => {
                     <div className={styles.list_item}><span className={styles.key}>Вага, г</span><span className={styles.value}>316</span></div>
                     <div className={styles.list_item}><span className={styles.key}>Об'єм, л</span><span className={styles.value}>9</span></div>
                     <div className={styles.list_item}><span className={styles.key}>Кількість відділень</span><span className={styles.value}>{compartments}</span></div>
-                    <div className={styles.list_item}><span className={styles.key}>Спинка</span><span className={styles.value}>{structure}</span></div>
+                    <div className={styles.list_item}><span className={styles.key}>Спинка</span><span className={styles.value}>{structures}</span></div>
                     <div className={styles.list_item}><span className={styles.key}>Група товарів</span><span className={styles.value}>{category}</span></div>
                 </div>
             </section>

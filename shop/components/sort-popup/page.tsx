@@ -10,8 +10,8 @@ type SortItem = {
 }
 
 export const list: SortItem[] = [
-  { name: "популярності", sortProperty: SortPropertyEnum.RATING_DESC },
-  { name: "непопулярності", sortProperty: SortPropertyEnum.RATING_ASC },
+  // { name: "популярності", sortProperty: SortPropertyEnum.RATING_DESC },
+  // { name: "непопулярності", sortProperty: SortPropertyEnum.RATING_ASC },
   { name: "спочатку дорожче", sortProperty: SortPropertyEnum.PRICE_DESC },
   { name: "спочатку дешевше", sortProperty: SortPropertyEnum.PRICE_ASC },
   { name: "по алфавіту з початку", sortProperty: SortPropertyEnum.TITLE_DESC },

@@ -1,6 +1,7 @@
 .bags__wrap {
+    position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     width: 100%;
     flex-wrap: wrap;
@@ -10,24 +11,23 @@
     background-repeat: no-repeat;
 }
 
-.aside {
-    display: none;
+.main {
+    width: 100%;
+    flex-wrap: wrap;
 }
 
 .bags__section {
-    flex: 2;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     width: 97%;
     gap: 10px;
-    margin-bottom: 40px;
+    padding: 3% 10px 3% 10px;
 }
 
 .back_to_main {
-    align-self: first baseline;
+    width: max-content;
     margin: 1.5%;
-
 }
 
 .back_to_main a {

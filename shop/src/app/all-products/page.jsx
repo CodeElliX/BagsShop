@@ -32,41 +32,45 @@ const AllProducts = () => {
     }, [])
     return (
         <div className={styles.all_product__wrap}>
-            <aside className={styles.aside}>
-                <Filters
-                    from="all-products"
-                    backpacksItems={itemsBackpacks}
-                    bagsItems={itemsBags}
-                    walletsItems={itemsWallets}
-                />
-            </aside>
-            <div className={styles.back_to_main}>
-                <Link href="/">
-                    <svg height="48" viewBox="0 0 48 48" width="48">
-                        <path d="M30.83 32.67l-9.17-9.17 9.17-9.17-2.83-2.83-12 12 12 12z" />
-                        <path d="M0-.5h48v48h-48z" fill="none" />
-                    </svg>
-                    <h4>На головну</h4>
-                </Link>
-            </div>
-            <CatalogSettings itemsLength={itemsLength} />
-            <div className={styles.all_products__content}>
+            {activeFilters.visible && (
+                <aside className={styles.aside}>
+                    <Filters
+                        from="all-products"
+                        backpacksItems={itemsBackpacks}
+                        bagsItems={itemsBags}
+                        walletsItems={itemsWallets}
+                    />
+                </aside>
+            )}
+            <div className={styles.main}>
+                <div className={styles.back_to_main}>
+                    <Link href="/">
+                        <svg height="48" viewBox="0 0 48 48" width="48">
+                            <path d="M30.83 32.67l-9.17-9.17 9.17-9.17-2.83-2.83-12 12 12 12z" />
+                            <path d="M0-.5h48v48h-48z" fill="none" />
+                        </svg>
+                        <h4>На головну</h4>
+                    </Link>
+                </div>
+                <CatalogSettings itemsLength={itemsLength} />
+                <div className={styles.all_products__content}>
 
-                {itemsBackpacks.map((obj) => {
-                    return (
-                        <ProductCard key={obj.id} {...obj} from="backpacks" />
-                    )
-                })}
-                {itemsBags.map((obj) => {
-                    return (
-                        <ProductCard key={obj.id} {...obj} from="bags" />
-                    )
-                })}
-                {itemsWallets.map((obj) => {
-                    return (
-                        <ProductCard key={obj.id} {...obj} from="wallets" />
-                    )
-                })}
+                    {itemsBackpacks.map((obj) => {
+                        return (
+                            <ProductCard key={obj.id} {...obj} from="backpacks" />
+                        )
+                    })}
+                    {itemsBags.map((obj) => {
+                        return (
+                            <ProductCard key={obj.id} {...obj} from="bags" />
+                        )
+                    })}
+                    {itemsWallets.map((obj) => {
+                        return (
+                            <ProductCard key={obj.id} {...obj} from="wallets" />
+                        )
+                    })}
+                </div>
             </div>
         </div>
     )

@@ -1,17 +1,30 @@
 .filter__wrap {
     position: absolute;
-    background-color: aliceblue;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     border-radius: 10px;
-    padding: 10px 10px 25px 20px;
     z-index: 10;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     top: -2%;
-    min-width: 24vw;
-    max-height: 120vh;
+    max-width: 99vw;
     transition: all 0.3s ease-in-out;
     transform: translateX(-100%);
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+.filters__main {
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    min-width: 24vw;
+    max-height: 120vh;
+    padding: 10px 10px 25px 20px;
+}
+
+.filters__background {
+    width: 100vw;
+    height: 100vh;
 }
 
 .hidden,
@@ -25,6 +38,26 @@
 
 .filter__wrap.open {
     transform: translateX(0);
+}
+
+.clouse__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.clouse__wrap button {
+    padding: 4px 2px 4px 2px;
+    max-height: fit-content;
+    border-color: blue;
+    border-radius: 4px;
+    background-color: rgb(216, 216, 249);
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+}
+
+.clouse__wrap button:active {
+    transform: translateY(1px);
 }
 
 .clouse {
@@ -116,15 +149,38 @@
     cursor: pointer;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 480px) and (max-height: 1000px) {
+
+    .filters__main {
+        padding-left: 5px;
+    }
+
+    .clouse__wrap button {
+        font-size: 9px;
+        padding: 2px;
+    }
+
+    .clouse {
+        max-width: fit-content;
+        min-height: fit-content;
+    }
+
+    .clouse h4 {
+        margin: 0;
+    }
+
+    .clouse svg {
+        width: 20px;
+        height: 20px;
+    }
+
     .products_groop {
         gap: 3px;
     }
 
-    .filter__wrap h4 {
+    .filters__main h4 {
         font-size: 12px;
         text-align: start;
-        margin-bottom: 0;
         display: block;
         width: max-content;
     }
@@ -140,25 +196,25 @@
         gap: 5px;
     }
 
-    .filter__wrap svg {
-        width: 30px;
-        height: 30px;
+    .products_groop__gender svg {
+        width: 40px;
+        height: 40px;
     }
 
     .products_groop__gender {
-        gap: 10px;
+        gap: 15px;
     }
 }
 
 @media (min-width: 480px) and (max-width: 767px) {
+
     .products_groop {
         gap: 3px;
     }
 
-    .filter__wrap h4 {
+    .filters__main h4 {
         font-size: 12px;
         text-align: start;
-        margin-bottom: 0;
         display: block;
         width: max-content;
     }
@@ -174,12 +230,53 @@
         gap: 5px;
     }
 
-    .filter__wrap svg {
-        width: 30px;
-        height: 30px;
+    .clouse__wrap button {
+        font-size: 12px;
+    }
+
+    .clouse {
+        max-width: fit-content;
+        min-height: fit-content;
+    }
+
+    .clouse h4 {
+        margin: 0;
+    }
+
+    .clouse svg {
+        width: 20px;
+        height: 20px;
     }
 
     .products_groop__gender {
-        gap: 10px;
+        gap: 15px;
+    }
+
+    .products_groop__gender svg {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1569px) {
+
+    .clouse__wrap button {
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 1569px) {
+
+    .filter__wrap {
+        top: 0;
+    }
+
+}
+
+@media (max-width: 1200px) and (max-height: 1300px) {
+
+    .filters__main {
+        min-width: 43vw;
     }
 }

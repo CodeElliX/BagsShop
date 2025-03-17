@@ -3,8 +3,8 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "./store";
 
 export enum SortPropertyEnum {
-  RATING_DESC = "rating",
-  RATING_ASC = "-rating",
+  // RATING_DESC = "rating",
+  // RATING_ASC = "-rating",
   TITLE_DESC = "title",
   TITLE_ASC = "-title",
   PRICE_DESC = "price",
@@ -42,11 +42,10 @@ const initialState: FilterState = {
   gender: [],
   chapter: [],
   sort: {
-    name: "популярності",
-    sortProperty: SortPropertyEnum.RATING_DESC,
+    name: "по алфавіту з початку",
+    sortProperty: SortPropertyEnum.TITLE_DESC,
   },
   visible: false,
-  // filterOpen: false
 };
 
 export const filterSlice = createSlice({
@@ -75,15 +74,13 @@ export const filterSlice = createSlice({
       }
     },
 
-    resetFilters: () => initialState,
+    resetFilters(state) {
+      return { ...initialState, visible: state.visible };
+    },
 
     setVisible(state, action: PayloadAction<boolean>) {
       state.visible = action.payload;
     },
-
-    // setFilterOpen(state, action: PayloadAction<boolean>) {
-    //   state.filterOpen = action.payload;
-    // }
   },
 });
 

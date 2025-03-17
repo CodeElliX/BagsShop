@@ -30,7 +30,7 @@ const Backpacks = () => {
         <>
             <div className={styles.backpacks_wrap}>
                 {activeFilters.visible && (
-                    <aside className={styles.aside}>
+                    <aside>
                         {pathname === "/backpacks/" && <Filters from="backpacks" backpacksItems={items} />}
                     </aside>
                 )}

@@ -56,17 +56,17 @@
 
 .link {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   margin: 0 auto;
   height: 25vh;
-  aspect-ratio: 1 / 1;
-  /* border: 1px solid red; */
+  overflow: hidden;
+  border-bottom: 3px solid rgba(127, 255, 212, 0.5);
 }
 
-.product {
-  border-bottom: 3px solid rgba(127, 255, 212, 0.5);
-  /* width: 100px;
-  height: 100px; */
+.link img {
+  align-self: center;
+  max-width: 80%;
+  max-height: 90%;
 }
 
 .bags_card__bottom {
@@ -92,16 +92,13 @@
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
     font-size: 30%;
-    min-height: 50vh;
+    min-height: 38vh;
   }
-/* 
+
   .link img {
-    width: 100%;
-    aspect-ratio: 1 / 1;
     object-fit: contain;
-    background-color: #FFFFFF;
-  } */
-   
+  }
+
   .card h4 {
     font-size: clamp(3vw, 3vw, 3vw);
     margin: 1vh 2px;
@@ -131,24 +128,12 @@
 
 @media (min-width: 457px) and (max-width: 1023px) {
   .bags__card {
-    min-height: 50vh;
     min-width: 49%;
     border-radius: 0;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
     font-size: 60%;
   }
-/* 
-  .link img {
-    width: 25vw;
-    height: 25vh;
-    background-color: #FFFFFF;
-    min-width: 100%;
-    min-height: 100%;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-  } */
 
   .card h4 {
     font-size: clamp(3vw, 3vw, 3vw);
@@ -167,7 +152,8 @@
 
   .bags_card__bottom {
     margin: 0 auto;
-    min-height: 4vh;
+    height: 100%;
+    box-sizing: border-box;
   }
 
   .bags_card__bottom span {

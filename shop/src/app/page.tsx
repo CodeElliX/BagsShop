@@ -10,8 +10,8 @@ export default function Home() {
   return (
     <div className={styles.main_page}>
       <div className={styles.main_page__head}>
-        <Image src={'./logo_2.png'} alt="logo" className={styles.main_page__logo} width={260} height={220} />
-        <Image src={'./lozung_2.png'} alt="lozung" className={styles.main_page__lozung} width={200} height={200} />
+        <Image src={'./logo_2.png'} alt="logo" className={styles.main_page__logo} width={235} height={200} />
+        <Image src={'./lozung_2.png'} alt="lozung" className={styles.main_page__lozung} width={180} height={180} />
       </div>
       <section>
         <Categories />
@@ -75,33 +75,33 @@ export default function Home() {
       </section>
       <section className={styles.main_page__section3}>
         <div className={styles.main_page__stiker_pack}>
-          <Image src={'./green_stiker.png'} alt="green_stiker" className={styles.main_page__stiker} width={200} height={200} />
+          <Image src={'./green_stiker.png'} alt="green_stiker" className={styles.main_page__stiker} width={180} height={180} />
           <Link href="/bags">
-            <Image src={'./bag2.png'} alt="yellow_stiker" className={styles.main_page__stiker_bag} width={120} height={150} />
+            <Image src={'./bag2.png'} alt="yellow_stiker" className={styles.main_page__stiker_bag} width={110} height={135} />
           </Link>
         </div>
         <div className={styles.main_page__stiker_pack}>
-          <Image src={'./lilac_stiker.png'} alt="lilac_stiker" className={styles.main_page__stiker} width={200} height={200} />
+          <Image src={'./lilac_stiker.png'} alt="lilac_stiker" className={styles.main_page__stiker} width={180} height={180} />
           <Link href="/backpacks">
-            <Image src={'./backpack2.png'} alt="yellow_stiker" className={styles.main_page__stiker_bag} width={120} height={150} />
+            <Image src={'./backpack2.png'} alt="yellow_stiker" className={styles.main_page__stiker_bag} width={110} height={135} />
           </Link>
         </div>
         <div className={styles.main_page__stiker_pack}>
-          <Image src={'./pink_stiker.png'} alt="pink_stiker" className={styles.main_page__stiker} width={200} height={200} />
+          <Image src={'./pink_stiker.png'} alt="pink_stiker" className={styles.main_page__stiker} width={180} height={180} />
           <Link href="/bags">
-            <Image src={'./bag1.png'} alt="yellow_stiker" className={styles.main_page__stiker_bag} width={120} height={150} />
+            <Image src={'./bag1.png'} alt="yellow_stiker" className={styles.main_page__stiker_bag} width={110} height={135} />
           </Link>
         </div>
         <div className={styles.main_page__stiker_pack}>
-          <Image src={'./yellow_stiker.png'} alt="yellow_stiker" className={styles.main_page__stiker} width={200} height={200} priority />
+          <Image src={'./yellow_stiker.png'} alt="yellow_stiker" className={styles.main_page__stiker} width={180} height={180} priority />
           <Link href="/backpacks">
-            <Image src={'./backpack1.png'} alt="yellow_stiker" className={styles.main_page__stiker_bag} width={120} height={150} />
+            <Image src={'./backpack1.png'} alt="yellow_stiker" className={styles.main_page__stiker_bag} width={110} height={135} />
           </Link>
         </div>
         <div className={styles.main_page__stiker_pack}>
-          <Image src={'./light_green_stiker.png'} alt="light_green" className={styles.main_page__stiker} width={200} height={200} />
+          <Image src={'./light_green_stiker.png'} alt="light_green" className={styles.main_page__stiker} width={180} height={180} />
           <Link href="/wallets">
-            <Image src={'./wallet1.png'} alt="yellow_stiker" className={styles.main_page__stiker_bag} width={120} height={150} />
+            <Image src={'./wallet1.png'} alt="yellow_stiker" className={styles.main_page__stiker_bag} width={110} height={135} />
           </Link>
         </div>
         <section className={styles.main_page__view}>
@@ -123,10 +123,10 @@ export default function Home() {
       </section>
       <section className={styles.main_page__section5}>
         <div className={styles.main_page__section5_photo_left}>
-          <Image src={'/woomen4.jpg'} alt="woomen4" className={styles.section5_photo1} width={200} height={250} priority />
-          <Image src={'/woomen3.jpg'} alt="woomen3" className={styles.section5_photo2} width={200} height={250} priority />
-          <Image src={'/men1.jpg'} alt="men1" className={styles.section5_photo3} width={300} height={250} priority />
-          <Image src={'/men3.jpg'} alt="men2" className={styles.section5_photo4} width={250} height={300} priority />
+          <Image src={'/woomen4.jpg'} alt="woomen4" className={styles.section5_photo1} width={180} height={225} priority />
+          <Image src={'/woomen3.jpg'} alt="woomen3" className={styles.section5_photo2} width={180} height={225} priority />
+          <Image src={'/men1.jpg'} alt="men1" className={styles.section5_photo3} width={270} height={225} priority />
+          <Image src={'/men3.jpg'} alt="men2" className={styles.section5_photo4} width={225} height={270} priority />
         </div>
         <div className={styles.main_page__section5_description}>
           <h1>Bags Shops – магазин рюкзаків, сумок та аксесуарів</h1>
@@ -142,7 +142,7 @@ export default function Home() {
           </Link>
         </div>
         <div className={styles.main_page__section5_photo_right}>
-          <Image src={'/woomen5.jpg'} alt="woomen_bag" className={styles.section5_photo5} width={200} height={250} priority />
+          <Image src={'/woomen5.jpg'} alt="woomen_bag" className={styles.section5_photo5} width={180} height={225} priority />
         </div>
       </section>
       <section className={styles.main_page__section6}>

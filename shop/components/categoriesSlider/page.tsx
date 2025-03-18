@@ -22,7 +22,7 @@ const CategoriesSlider = () => {
     useLayoutEffect(() => {
         if (slideRef.current) {
             const slideWidth = slideRef.current.offsetWidth;
-            const gap = 20;
+            const gap = 10;
             setCardWidth(slideWidth + gap);
         }
     }, []);
@@ -74,7 +74,7 @@ const CategoriesSlider = () => {
                 <div className={styles.slider} ref={sliderRef}>
                     {[...images, ...images, ...images].map((img, i) => (
                         <div key={i} className={styles.slide} ref={i === 0 ? slideRef : null}>
-                            <Image src={img} alt="card" width={150} height={150} priority />
+                            <Image src={img} alt="card" width={135} height={135} priority />
                         </div>
                     ))}
                 </div>

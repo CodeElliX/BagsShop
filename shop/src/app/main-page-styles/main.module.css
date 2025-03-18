@@ -21,21 +21,21 @@
 .main_page__lozung {
     position: absolute;
     right: 43%;
-    top: 20px;
+    top: 18px;
 }
 
 .main_page__logo {
     position: absolute;
-    top: 40px;
-    left: 30px;
+    top: 36px;
+    left: 27px;
 }
 
 .main_page__section2 {
     display: flex;
-    padding-top: 60px;
-    padding-bottom: 40px;
-    gap: 10px;
-    margin-bottom: 100px;
+    padding-top: 54px;
+    padding-bottom: 36px;
+    gap: 9px;
+    margin-bottom: 90px;
 }
 
 .main_page__box {
@@ -48,17 +48,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    padding: 0px 20px;
-    height: 120px;
-    font-size: 22px;
+    gap: 18px;
+    padding: 0px 18px;
+    height: 108px;
+    font-size: 20px;
     font-weight: bold;
     opacity: 0.6;
 }
 
 .main_page__item svg {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     position: relative;
 }
 
@@ -69,7 +69,7 @@
 
 .main_page__box:hover {
     transform: translateY(-5px);
-    box-shadow: 5px 5px 22px rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
     clip-path: inset(0 -10px -10px 0);
 }
 
@@ -82,12 +82,12 @@
     background-repeat: no-repeat;
     width: 100%;
     height: 50vh;
-    margin-bottom: 100px;
-    padding: 0 0 60px 0;
+    margin-bottom: 90px;
+    padding: 0 0 54px 0;
 }
 
 .main_page__section3 h4 {
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .main_page__stiker_pack {
@@ -96,8 +96,8 @@
 
 .main_page__stiker_bag {
     position: absolute;
-    left: 40px;
-    top: 20px;
+    left: 36px;
+    top: 18px;
     transition: transform 200ms ease-in-out;
 }
 
@@ -115,7 +115,7 @@
 }
 
 .main_page__view svg {
-    width: 120px;
+    width: 100px;
     fill: #64C9C1;
     transition: transform 200ms ease-in-out;
     cursor: pointer;
@@ -138,8 +138,8 @@
     background-repeat: no-repeat;
     width: 100%;
     height: 50vh;
-    margin-bottom: 60px;
-    border-radius: 40px;
+    margin-bottom: 54px;
+    border-radius: 36px;
     position: relative;
 }
 
@@ -153,8 +153,8 @@
     position: absolute;
     border-top-right-radius: 30%;
     border-bottom-right-radius: 70%;
-    border-top-left-radius: 40px;
-    border-bottom-left-radius: 40px;
+    border-top-left-radius: 36px;
+    border-bottom-left-radius: 36px;
     left: 0;
     border: 4px solid rgb(209, 227, 232);
 }
@@ -164,7 +164,7 @@
 }
 
 .main_page__section4_message i {
-    font-size: 48px;
+    font-size: 43px;
     font-weight: bold;
     color: rgb(46, 198, 254);
     text-shadow:
@@ -179,7 +179,9 @@
     flex-direction: row;
     width: 100%;
     height: 100vh;
-    margin-top: 50px;
+    margin-top: 45px;
+    border: 1px solid;
+    border-color: rgba(50, 48, 48, 0.2);
 }
 
 .main_page__section5_photo_left,
@@ -194,20 +196,23 @@
 .main_page__section5_description {
     display: flex;
     flex-direction: column;
+    padding: 10px;
     gap: 0;
     flex: 1;
+    /* border: 1px solid red; */
 }
 
 .main_page__section5_description h1 {
-    font-size: 32px;
+    font-size: 26px;
     opacity: 0.7;
     line-height: 1;
     text-align: center;
     margin-bottom: 0;
+    padding: 10px;
 }
 
 .main_page__section5_description p {
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
     margin: 10px;
 }
@@ -224,8 +229,8 @@
     font-weight: bold;
     text-shadow: 1px;
     border-radius: 10px;
-    padding: 10px 20px;
-    font-size: 18px;
+    padding: 10px 18px;
+    font-size: 16px;
     transition: transform 300ms ease-in-out;
 }
 
@@ -288,35 +293,45 @@
     background-repeat: no-repeat;
     width: 100%;
     height: 50vh;
-    margin-bottom: 20px;
-    padding: 0 0 60px 0;
-    margin-top: 50px;
+    margin-bottom: 18px;
+    padding: 0 0 54px 0;
+    margin-top: 45px;
     overflow: hidden;
 }
 
 
+/* @media (max-width: 327px) {
+    .main_page__section5_description h1 {
+        font-size: 10px;
+    }
 
-@media (max-width: 480px) {
+    .main_page__section5_description p {
+        font-size: 8px;
+        margin: 5px;
+    }
+} */
+
+@media (min-width: 327px) and (max-width: 480px) {
 
     .main_page__head {
         height: 30vh;
     }
 
     .main_page__lozung {
-        width: 70px;
-        height: 70px;
+        width: 63px;
+        height: 63px;
     }
 
     .main_page__logo {
-        top: 30px;
+        top: 27px;
         left: 10px;
-        width: 50px;
-        height: 50px;
+        width: 45px;
+        height: 45px;
     }
 
     .main_page__section2 {
         padding-top: 0;
-        margin-bottom: 40px;
+        margin-bottom: 36px;
         padding-bottom: 0;
         padding-top: 20px;
         flex-wrap: wrap;
@@ -330,44 +345,43 @@
 
     .main_page__item {
         justify-content: flex-start;
-        height: 40px;
-        font-size: 12px;
+        height: 36px;
+        font-size: 11px;
     }
 
     .main_page__item svg {
-        width: 30px;
-        height: 30px;
+        width: 27px;
+        height: 27px;
     }
 
     .main_page__section3 {
         margin-bottom: 10px;
-        padding-bottom: 150px;
+        padding-bottom: 135px;
         height: 1vh;
         gap: 10px;
         flex-wrap: wrap;
     }
 
     .main_page__stiker_pack {
-        height: 70px;
-
+        height: 63px;
     }
 
     .main_page__stiker {
-        width: 70px;
-        height: 70px;
+        width: 63px;
+        height: 63px;
     }
 
     .main_page__stiker_bag {
-        width: 30px;
-        height: 55px;
-        left: 20px;
-        top: 7.5px;
+        width: 27px;
+        height: 50px;
+        left: 18px;
+        top: 7px;
     }
 
     .main_page__view {
-        height: 30px;
+        height: 27px;
         text-align: center;
-        padding-left: 20px;
+        padding-left: 18px;
         padding-top: 2px;
         flex-direction: row;
         width: 32%;
@@ -386,7 +400,7 @@
     .main_page__view h4 {
         text-align: center;
         margin-top: 0;
-        font-size: 12px;
+        font-size: 11px;
         line-height: 0.9;
     }
 
@@ -410,7 +424,7 @@
     }
 
     .main_page__section4_message i {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     .main_page__section5 {
@@ -426,6 +440,8 @@
 
     .main_page__section5_description {
         height: 50vh;
+        justify-content: center;
+        align-items: center;
     }
 
     .main_page__section5_photo_right img {
@@ -433,18 +449,18 @@
     }
 
     .main_page__section5_description h1 {
-        font-size: 16px;
+        font-size: 12px;
     }
 
     .main_page__section5_description p {
-        font-size: 9px;
+        font-size: 10px;
         margin: 5px;
     }
 
     .main_page__section5_description button {
         border-radius: 5px;
         padding: 5px 10px;
-        font-size: 9px;
+        font-size: 8px;
     }
 
     .main_page__section6 {
@@ -455,28 +471,28 @@
     }
 }
 
-@media (min-width: 480px) and (max-width: 1200px) {
+@media (min-width: 480px) and (max-width: 1024px) {
     .main_page__head {
         height: 30vh;
     }
 
     .main_page__lozung {
-        width: 70px;
-        height: 70px;
+        width: 63px;
+        height: 63px;
     }
 
     .main_page__logo {
-        top: 30px;
+        top: 27px;
         left: 10px;
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
     }
 
     .main_page__section2 {
         padding-top: 0;
-        margin-bottom: 40px;
+        margin-bottom: 36px;
         padding-bottom: 0;
-        padding-top: 20px;
+        padding-top: 18px;
         flex-wrap: wrap;
     }
 
@@ -488,44 +504,43 @@
 
     .main_page__item {
         justify-content: flex-start;
-        height: 40px;
-        font-size: 12px;
+        height: 36px;
+        font-size: 11px;
     }
 
     .main_page__item svg {
-        width: 30px;
-        height: 30px;
+        width: 27px;
+        height: 27px;
     }
 
     .main_page__section3 {
         margin-bottom: 10px;
-        padding-bottom: 150px;
+        padding-bottom: 135px;
         height: 1vh;
         gap: 10px;
         flex-wrap: wrap;
     }
 
     .main_page__stiker_pack {
-        height: 70px;
-
+        height: 63px;
     }
 
     .main_page__stiker {
-        width: 70px;
-        height: 70px;
+        width: 63px;
+        height: 63px;
     }
 
     .main_page__stiker_bag {
-        width: 30px;
-        height: 55px;
-        left: 20px;
-        top: 7.5px;
+        width: 27px;
+        height: 50px;
+        left: 18px;
+        top: 7px;
     }
 
     .main_page__view {
-        height: 30px;
+        height: 27px;
         text-align: center;
-        padding-left: 20px;
+        padding-left: 18px;
         padding-top: 2px;
         flex-direction: row;
         width: 32%;
@@ -543,21 +558,21 @@
     .main_page__view h4 {
         text-align: center;
         margin-top: 0;
-        font-size: 12px;
+        font-size: 11px;
         line-height: 0.9;
     }
 
     .main_page__section4 {
         height: 30vh;
-        border-radius: 20px;
+        border-radius: 18px;
     }
 
     .main_page__section4_message {
         align-items: baseline;
         border-top-right-radius: 40%;
         border-bottom-right-radius: 70%;
-        border-top-left-radius: 20px;
-        border-bottom-left-radius: 20px;
+        border-top-left-radius: 18px;
+        border-bottom-left-radius: 18px;
         top: -0.5px;
         height: 97%;
     }
@@ -567,7 +582,7 @@
     }
 
     .main_page__section4_message i {
-        font-size: 22px;
+        font-size: 16px;
     }
 
     .main_page__section5 {
@@ -590,18 +605,18 @@
     }
 
     .main_page__section5_description h1 {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .main_page__section5_description p {
-        font-size: 9px;
+        font-size: 8px;
         margin: 5px;
     }
 
     .main_page__section5_description button {
         border-radius: 5px;
-        padding: 5px 10px;
-        font-size: 9px;
+        padding: 5px 8px;
+        font-size: 8px;
     }
 
     .main_page__section6 {
@@ -609,5 +624,22 @@
         padding: 0 0 10px 0;
         margin-top: 0;
         height: 30vh;
+    }
+}
+
+@media (max-height: 590px) {
+    .main_page__section6 {
+        height: 50vh;
+        padding: 0 0 54px 0;
+        margin-top: 20px;
+    }
+
+    .main_page__section5_description h1 {
+        font-size: 10px;
+    }
+
+    .main_page__section5_description p {
+        font-size: 8px;
+        margin: 5px;
     }
 }

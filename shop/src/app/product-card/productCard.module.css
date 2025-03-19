@@ -1,7 +1,7 @@
 .bags__card {
-  width: 211px;
+  width: 190px;
   height: 100%;
-  min-height: 320px;
+  min-height: 280px;
   border-radius: 20px;
   border: 1px solid rgba(127, 255, 212, 0.2);
   overflow: hidden;
@@ -26,15 +26,16 @@
   overflow: hidden;
   hyphens: auto;
   height: 10%;
-  min-height: 50px;
+  min-height: 45px;
   padding-bottom: 2%;
   margin-bottom: 0;
-  font-size: 16px;
+  font-size: 14px;
+  padding: 2px;
 }
 
 .bags_card__bottom i {
   color: #008000;
-  font-size: 14px;
+  font-size: 12px;
   margin-bottom: 5px;
 }
 
@@ -65,8 +66,9 @@
 
 .link img {
   align-self: center;
-  max-width: 80%;
-  max-height: 90%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
 .bags_card__bottom {
@@ -75,11 +77,11 @@
   margin: 0 auto;
   width: 100%;
   position: relative;
-  min-height: 120px;
+  min-height: 110px;
 }
 
 .bags_card__bottom span {
-  font-size: 20px;
+  font-size: 18px;
   color: #3E77AA;
 }
 

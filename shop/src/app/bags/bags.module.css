@@ -52,4 +52,13 @@
     .bags__section {
         gap: 4px;
     }
+
+    .back_to_main a {
+        font-size: 12px;
+    }
+
+    .back_to_main svg {
+        width: 16px;
+        height: 16px;
+    }
 }

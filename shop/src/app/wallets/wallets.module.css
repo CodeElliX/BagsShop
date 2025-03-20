@@ -47,8 +47,18 @@
     height: 20px;
 }
 
-@media (min-width: 480px) and (max-width: 767px) {
+@media (max-width: 767px) {
+
     .wallets__section {
         gap: 4px;
+    }
+
+    .back_to_main a {
+        font-size: 12px;
+    }
+
+    .back_to_main svg {
+        width: 16px;
+        height: 16px;
     }
 }

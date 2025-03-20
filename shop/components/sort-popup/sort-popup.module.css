@@ -3,18 +3,18 @@
     display: flex;
     flex-direction: column;
     background-color: azure;
-    font-size: 16px;
+    font-size: 14px;
     border: 1px solid rgba(26, 26, 26, 0.2);
     border-radius: 6px;
     width: 20vw;
-    padding: 10px 10px;
+    padding: 5px 2px;
     z-index: 9;
     position: relative;
     cursor: pointer;
 }
 
-.sort__wrap:active .sort__label svg{
-  transform: translateY(1px);
+.sort__wrap:active .sort__label svg {
+    transform: translateY(1px);
 }
 
 .sort__label {
@@ -49,7 +49,9 @@
     list-style: none;
     padding: 5px;
     transition: all 0.1s ease-in-out;
-    margin-left: 4%;
+    margin-left: 8%;
+    hyphens: auto;
+    width: 100%;
 }
 
 .active {
@@ -73,6 +75,20 @@
     .sort__wrap {
         width: 40vw;
         padding: 4%;
+        font-size: 12px;
+    }
+
+    .sort__label span {
+        margin-left: 1%;
+    }
+
+    .sort__popup ul li {
+        margin-left: 1%;
+    }
+
+    .sort__label svg {
+        width: 20px;
+        height: 20px;
     }
 }
 

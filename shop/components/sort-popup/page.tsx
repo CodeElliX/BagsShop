@@ -47,8 +47,8 @@ export const SortPopup = React.memo(() => {
     <div ref={sortRef} className={styles.sort__wrap} onClick={() => setOpen(!open)}>
       <div className={styles.sort__label}>
         <span>{sort.name}</span>
-       <svg height="30px" viewBox="0 0 512 512" width="30px">
-        <polygon points="396.6,160 416,180.7 256,352 96,180.7 115.3,160 256,310.5 "/>
+        <svg height="30px" viewBox="0 0 512 512" width="30px">
+          <polygon points="396.6,160 416,180.7 256,352 96,180.7 115.3,160 256,310.5 " />
         </svg>
       </div>
       {open && (

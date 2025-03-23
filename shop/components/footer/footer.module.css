@@ -69,18 +69,28 @@
 }
 
 @media (max-width: 480px) {
+
+    .footer_wrap {
+        width: 90%;
+    }
+
     .footer__sections {
-        gap: 40px;
+        gap: 36px;
         flex-wrap: wrap;
-        padding: 30px 10px;
+        padding: 20px 10px;
     }
 }
 
 @media (min-width: 480px) and (max-width: 1096px) {
+
+    .footer_wrap {
+        width: 90%;
+    }
+
     .footer__sections {
-        gap: 40px;
+        gap: 36px;
         flex-wrap: wrap;
-        padding: 30px 10px;
+        padding: 20px 10px;
     }
 
     .footer_wrap {

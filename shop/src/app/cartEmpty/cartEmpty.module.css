@@ -7,12 +7,12 @@
 }
 
 .cart_empty__wrap h2 {
- font-size: 32px;
+    font-size: 32px;
 }
 
 .cart_empty__wrap p {
- font-size: 18px;
- opacity: 0.8;
+    font-size: 18px;
+    opacity: 0.8;
 }
 
 .cart_empty__wrap button {

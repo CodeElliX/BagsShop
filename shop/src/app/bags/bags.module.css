@@ -23,6 +23,7 @@
     width: 97%;
     gap: 10px;
     padding: 3% 10px 3% 10px;
+    border: 1px solid red;
 }
 
 .back_to_main {
@@ -51,6 +52,7 @@
 @media (max-width: 767px) {
     .bags__section {
         gap: 4px;
+        padding: 3% 5px 3% 5px;
     }
 
     .back_to_main a {

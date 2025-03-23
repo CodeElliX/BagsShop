@@ -50,6 +50,7 @@
 @media (max-width: 767px) {
     .all_products__content {
         gap: 4px;
+        padding: 3% 5px 3% 5px;
     }
 
     .back_to_main a {

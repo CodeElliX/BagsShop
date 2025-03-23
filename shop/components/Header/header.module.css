@@ -58,6 +58,7 @@
 
 @media (max-width: 480px) {
   .header {
+    min-width: 100%;
     justify-content: center;
     align-items: center;
     height: 8vh;

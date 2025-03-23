@@ -50,6 +50,8 @@
 @media (max-width: 767px) {
     .backpacks__bags_section {
         gap: 4px;
+        padding: 3% 5px 3% 5px;
+        gap: 4px;
     }
 
     .back_to_main a {

@@ -26,6 +26,34 @@ const Backpacks = () => {
         dispatch(resetFilters());
     }, [dispatch])
 
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth <= 768) {
+                if (activeFilters.visible) {
+                    document.body.style.position = 'fixed';
+                    document.body.style.top = `-${window.scrollY}px`;
+                    document.body.style.width = '100%';
+                } else {
+                    const scrollY = document.body.style.top;
+                    document.body.style.position = '';
+                    document.body.style.top = '';
+                    document.body.style.width = '';
+                    window.scrollTo(0, parseInt(scrollY || '0') * -1);
+                }
+            }
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, [activeFilters.visible]);
+
+
+
     return (
         <>
             <div className={styles.backpacks_wrap}>

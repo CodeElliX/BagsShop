@@ -131,7 +131,7 @@ const Filters = (props) => {
             <div className={styles.filters__main}>
                 <div className={styles.clouse__wrap}>
                     <div className={styles.clouse} onClick={onClickCloseFilters}>
-                        <svg height="48" viewBox="0 0 48 48" width="48">
+                        <svg height="50" viewBox="0 0 48 48" width="50">
                             <path d="M30.83 32.67l-9.17-9.17 9.17-9.17-2.83-2.83-12 12 12 12z" />
                             <path d="M0-.5h48v48h-48z" fill="none" />
                         </svg>

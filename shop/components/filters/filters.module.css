@@ -171,12 +171,11 @@
         max-height: 100vh;
         padding-left: 5%;
         padding-top: 5%;
-        border: 2px solid red;
     }
 
     .clouse__wrap button {
-        font-size: 60%;
-        padding: 2%;
+        font-size: 50%;
+        padding: 1%;
     }
 
     .clouse {
@@ -189,8 +188,8 @@
     }
 
     .clouse svg {
-        width: 20%;
-        height: 20%;
+        width: 18%;
+        height: 18%;
     }
 
     .products_groop {
@@ -198,7 +197,6 @@
     }
 
     .filters__main h4 {
-        font-size: 100%;
         text-align: start;
         display: block;
         width: max-content;
@@ -208,25 +206,25 @@
         margin-left: 0;
         margin-top: 10px;
         margin-bottom: 3px;
-        font-size: 30px;
+        font-size: 20px;
         align-self: center;
     }
 
     .products_groop h4 {
-        font-size: 28px;
+        font-size: 22px;
         margin-top: 10%;
         align-self: center;
     }
 
     .products_groop span {
-        font-size: 20px;
+        font-size: 18px;
         padding-left: 0;
         gap: 5px;
     }
 
     .products_groop input {
-        min-width: 20px;
-        min-height: 20px;
+        min-width: 16px;
+        min-height: 16px;
         margin-right: 3%;
     }
 

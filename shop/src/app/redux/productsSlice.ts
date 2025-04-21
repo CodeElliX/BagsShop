@@ -2,18 +2,21 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 import { RootState } from "./store";
 
-export const fetchBackpacks = createAsyncThunk("backpack/fetchBackpacksStatus", async () => {
-    const { data } = await axios.get("/backpackData.json")
+export const fetchBackpacks = createAsyncThunk("backpack/fetchBackpacksStatus", async (_, thankAPI) => {
+    const { signal } = thankAPI;
+    const { data } = await axios.get("/backpackData.json", { signal })
     return data;
 })
 
-export const fetchBags = createAsyncThunk("bag/fetchBagsStatus", async () => {
-    const { data } = await axios.get("/bagsData.json")
+export const fetchBags = createAsyncThunk("bag/fetchBagsStatus", async (_, thankAPI) => {
+    const { signal } = thankAPI;
+    const { data } = await axios.get("/bagsData.json", { signal })
     return data;
 })
 
-export const fetchWallets = createAsyncThunk("wallet/fetchWalletsStatus", async () => {
-    const { data } = await axios.get("/walletsData.json")
+export const fetchWallets = createAsyncThunk("wallet/fetchWalletsStatus", async (_, thankAPI) => {
+    const { signal } = thankAPI;
+    const { data } = await axios.get("/walletsData.json", { signal })
     return data;
 })
 

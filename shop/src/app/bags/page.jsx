@@ -21,9 +21,13 @@ const Bags = () => {
 
 
     useEffect(() => {
-        dispatch(fetchBags());
+        const fetchBagsThunk = dispatch(fetchBags());
         dispatch(resetFilters());
+        return () => {
+            fetchBagsThunk.abort();
+        }
     }, [dispatch])
+
     return (
         <>
             <div className={styles.bags__wrap}>

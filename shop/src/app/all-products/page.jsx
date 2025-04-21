@@ -25,11 +25,17 @@ const AllProducts = () => {
     const itemsWallets = preRenderFiltersHomePage(searchValue, wallets, activeFilters);
 
     useEffect(() => {
-        dispatch(fetchBackpacks());
-        dispatch(fetchBags());
-        dispatch(fetchWallets());
+        const fetchBackpacksThunk = dispatch(fetchBackpacks());
+        const fetchBagsThunk = dispatch(fetchBags());
+        const fetchWalletsThunk = dispatch(fetchWallets());
         dispatch(resetFilters());
+        return () => {
+            fetchBackpacksThunk.abort();
+            fetchBagsThunk.abort();
+            fetchWalletsThunk.abort();
+        }
     }, [])
+
     return (
         <div className={styles.all_product__wrap}>
             {activeFilters.visible && (

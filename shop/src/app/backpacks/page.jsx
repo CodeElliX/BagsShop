@@ -22,8 +22,11 @@ const Backpacks = () => {
     const filters = preRenderFilters(searchValue, items, activeFilters);
 
     useEffect(() => {
-        dispatch(fetchBackpacks());
+        const fetchBackpacksThunk = dispatch(fetchBackpacks());
         dispatch(resetFilters());
+        return () => {
+            fetchBackpacksThunk.abort();
+        }
     }, [dispatch])
 
 

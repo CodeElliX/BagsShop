@@ -21,8 +21,11 @@ const Wallets = () => {
     const filters = preRenderFilters(searchValue, items, activeFilters);
 
     useEffect(() => {
-        dispatch(fetchWallets());
+        const fetchWalletsThunk = dispatch(fetchWallets());
         dispatch(resetFilters());
+        return () => {
+            fetchWalletsThunk.abort();
+        }
     }, [dispatch])
 
     return (

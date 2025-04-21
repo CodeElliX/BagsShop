@@ -37,22 +37,37 @@ const ProductItem = () => {
     };
 
     useEffect(() => {
+        const controller = new AbortController();
         if (productId && from) {
             async function fetchData() {
-                const dataFile = from === "backpacks"
-                    ? "/backpackData.json"
-                    : from === "bags"
-                        ? "/bagsData.json"
-                        : from === "wallets"
-                            ? "/walletsData.json"
-                            : null;
-
-                const response = await axios.get(dataFile);
-                const productData = response.data.find(item => item.id === String(productId));
-                setProduct(productData);
-                return productData;
+                try {
+                    const dataFile = from === "backpacks"
+                        ? "/backpackData.json"
+                        : from === "bags"
+                            ? "/bagsData.json"
+                            : from === "wallets"
+                                ? "/walletsData.json"
+                                : null;
+                    if (!dataFile) return;
+                    const response = await axios.get(dataFile, { signal: controller.signal });
+                    const productData = response.data.find(item => item.id === String(productId));
+                    setProduct(productData);
+                    return productData;
+                }
+                catch (err) {
+                    if (axios.isCancel(err)) {
+                        console.log('Запрос отменён');
+                    } else if (err.name === "CanceledError") {
+                        console.log('AbortController отменил запрос');
+                    } else {
+                        console.error('Ошибка запроса:', err);
+                    }
+                }
             }
             fetchData();
+        }
+        return () => {
+            controller.abort()
         }
     }, [productId, from]);
 
